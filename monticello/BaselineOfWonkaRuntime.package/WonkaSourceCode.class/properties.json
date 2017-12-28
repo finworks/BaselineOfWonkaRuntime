@@ -1,0 +1,16 @@
+{
+	"category" : "BaselineOfWonkaRuntime",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"wonkaRoot",
+		"platform",
+		"loadedRuntimeVersion" ],
+	"name" : "WonkaSourceCode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

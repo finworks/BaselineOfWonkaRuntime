@@ -1,0 +1,19 @@
+[submodule "3rdparty/gemstone/filetree"]
+	path = 3rdparty/gemstone/filetree
+	url = git@github.com:dalehenrich/filetree
+[submodule "3rdparty/gemstone/glass"]
+	path = 3rdparty/gemstone/glass
+	url = git@github.com:glassdb/glass.git
+[submodule "3rdparty/gemstone/grease"]
+	path = 3rdparty/gemstone/grease
+	url = git@github.com:GsDevKit/Grease.git
+[submodule "3rdparty/gemstone/gsUpgrader"]
+	path = 3rdparty/gemstone/gsUpgrader
+	url = git@github.com:GsDevKit/gsUpgrader.git
+[submodule "3rdparty/gemstone/metacello-work"]
+	path = 3rdparty/gemstone/metacello-work
+	url = git@github.com:dalehenrich/metacello-work.git
+[submodule "3rdparty/gemstone/metacelloPreview"]
+	path = 3rdparty/gemstone/metacelloPreview
+	url = git@github.com:dalehenrich/metacello-work.git
+	branch = configuration

@@ -1,0 +1,28 @@
+
+set user DataCurator password swordfish gemstone development
+login
+
+run
+
+   UserGlobals at: #wonkaOverNetwork put: true.
+   UserGlobals at: #wonkaRoot put: '../../reproduce'.
+   UserGlobals at: #wonkaPlatformName put: 'GemStone3.4'.
+
+   Gofer it
+     repository: (MCFileTreeRepository new directory: (ServerFileDirectory on: wonkaRoot, '/monticello'));
+     package: 'BaselineOfWonkaRuntime';
+     load.
+   System commitTransaction
+
+   MCPlatformSupport
+     autoMigrate: false;
+     commitOnAlmostOutOfMemoryDuring: [
+	WonkaLoader
+	    loadWonkaRuntimeGroup: 'Tests'
+	    fromWonkaRoot: wonkaRoot
+	    platform: wonkaPlatformName
+	    overNetwork: wonkaOverNetwork
+     ].
+   System commitTransaction
+
+%

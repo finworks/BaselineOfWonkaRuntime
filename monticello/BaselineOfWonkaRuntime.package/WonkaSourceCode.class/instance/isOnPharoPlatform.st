@@ -1,0 +1,3 @@
+testing
+isOnPharoPlatform
+	^ platform = 'pharo'

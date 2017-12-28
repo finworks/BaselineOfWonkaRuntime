@@ -1,0 +1,3 @@
+actions
+setLoadedRuntimeVersion
+	loadedRuntimeVersion := self currentRuntimeVersion

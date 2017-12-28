@@ -1,0 +1,3 @@
+accessing
+localThirdPartySeaside31Repository
+	^ self fileTreeRepositoryNameForBaseName: 'gemstone/seaside31/repository'

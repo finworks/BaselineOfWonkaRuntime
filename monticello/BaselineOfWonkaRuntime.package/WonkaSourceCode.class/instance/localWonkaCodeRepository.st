@@ -1,0 +1,3 @@
+accessing
+localWonkaCodeRepository
+	^ MCFileTreeRepository new directory: self localWonkaMonticelloCodeDirectory

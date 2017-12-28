@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfWonkaRuntime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfWonkaRuntime",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

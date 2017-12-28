@@ -1,0 +1,3 @@
+accessing
+localThirdPartyGLASSRepository
+	^ self fileTreeRepositoryForDirectory: self localThirdPartyGLASSDirectory

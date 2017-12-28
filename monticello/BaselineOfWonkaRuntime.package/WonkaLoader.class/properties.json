@@ -1,0 +1,19 @@
+{
+	"category" : "BaselineOfWonkaRuntime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectBaseName",
+		"repository",
+		"modes",
+		"metacello",
+		"warnings",
+		"projectNamesAndWantedVersions" ],
+	"name" : "WonkaLoader",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
