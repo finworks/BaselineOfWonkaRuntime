@@ -29,7 +29,6 @@ baseline: spec
 		      operator: #=;
 		      loads: #('Core' 'Scriptaculous' 'Swazoo' 'Zinc').
 		];
-            spec
                 project: 'SeasideDevelopment' copyFrom: 'Seaside3' with: [ spec loads: #('Seaside-Development') ];
 		configuration: 'Magritte3' with: [
 		   spec
@@ -87,7 +86,7 @@ baseline: spec
                 group: 'Core' with: #('Seaside3' 'Magritte3' 'CSV' 'XMLPullParser' 'Pier-EditorEnh' 'XMLSupport');
                 group: 'default' with: #('Core');
                 group: 'AcceptanceTesting' with: #('Core' 'SeasideDevelopment');
-                group: 'Tests' with: #('AcceptanceTesting' 'HudsonBuildTools' 'WebTester-Selenium') ];
+                group: 'CI' with: #('AcceptanceTesting' 'HudsonBuildTools' 'WebTester-Selenium') ];
         for: #squeakCommon do: [ 
            spec
                configuration: 'SoapOpera' with: [ 
@@ -135,4 +134,4 @@ baseline: spec
 		      repository: 'http://www.squeaksource.com/WebTester/';
 		      requires: 'WebTester-Selenium' ];
                 group: 'Core' with: #('ZincHTTPComponents' 'SOAP' 'SeasideFastCGI');
-                group: 'Tests' with: #('WebTester-Gemstone-Selenium') ]
+                group: 'CI' with: #('WebTester-Gemstone-Selenium') ]

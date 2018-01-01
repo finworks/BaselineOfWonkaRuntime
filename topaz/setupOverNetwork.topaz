@@ -1,0 +1,14 @@
+iferror exit
+
+set user DataCurator password swordfish gemstone gs64stone
+
+login
+
+run
+   UserGlobals at: #wonkaOverNetwork put: true.
+   UserGlobals at: #wonkaRoot put: '/vagrant'.
+   UserGlobals at: #wonkaPlatformName put: 'GemStone3.4'.
+   System commitTransaction
+%
+
+exit

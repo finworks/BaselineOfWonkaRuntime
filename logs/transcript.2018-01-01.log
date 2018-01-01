@@ -1,0 +1,999 @@
+--transcript--'Loading runtime version 1.1.0 from none'
+--transcript--'*** Loading GsUpgrader
+  From: filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfGsUpgrader-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository'
+--transcript--'Loaded -> BaselineOfGsUpgrader-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository'
+--transcript--'Loading baseline of BaselineOfGsUpgrader...'
+--transcript--'Fetched -> GsUpgrader-Core-dkh.121 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository'
+--transcript--'Loaded -> GsUpgrader-Core-dkh.121 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'...finished baseline'
+--transcript--'======================'
+--transcript--'=====Installing patchForGsDevKitIssue60: HTTPSocket'
+--transcript--'======================'
+--transcript--'=====Installing patchForGsDevKitIssue60: MCPlatformSupport class'
+--transcript--'*** Loading Metacello preview bootstrap'
+--transcript--'Loading 1.0-beta.32.1 of ConfigurationOfMetacello...'
+--transcript--'Project: FileTree stable'
+--transcript--' [1.0.6.1]'
+--transcript--'Project: Monticello 0.243'
+--transcript--' [0.244.3]'
+--transcript--'Project: GsMonticello 0.244.2'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Project: GsCore 0.247'
+--transcript--' [0.250]'
+--transcript--'Evaluated -> 1.0-beta.32.1 [ConfigurationOfMetacello] >> metacelloPrimeRegistry'
+--transcript--'...finished 1.0-beta.32.1'
+--transcript--'*** Loading Metacello preview'
+--transcript--'Fetched -> ConfigurationOfMetacelloPreview-dkh.60 --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview'
+--transcript--'Loaded -> ConfigurationOfMetacelloPreview-dkh.60 --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview'
+--transcript--'Loading 1.0.0-beta.32.18 of ConfigurationOfMetacelloPreview...'
+--transcript--'Fetched -> BaselineOfMetacello-dkh.85 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Loaded -> BaselineOfMetacello-dkh.85 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Project: Metacello baseline'
+--transcript--'Fetched -> BaselineOfFileTree-dkh.4 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Loaded -> BaselineOfFileTree-dkh.4 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> MonticelloFileTree-Core-dkh.199 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Fetched -> MonticelloFileTree-FileDirectory-Utilities-dkh.15 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Base-dkh.123 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Core-dkh.807 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-MC-dkh.722 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.56 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GS3x-Platform-dkh.1 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-ToolBox-dkh.139 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-FileTree-dkh.36 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GitBasedRepository-dkh.13 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Bitbucket-dkh.5 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GitHub-dkh.44 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Loaded -> MonticelloFileTree-Core-dkh.199 --- github://dalehenrich/filetree:gemstone2.4/repository --- cache'
+--transcript--'Loaded -> MonticelloFileTree-FileDirectory-Utilities-dkh.15 --- github://dalehenrich/filetree:gemstone2.4/repository --- cache'
+--transcript--'Loaded -> Metacello-Base-dkh.123 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Core-dkh.807 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-MC-dkh.722 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.56 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-GS3x-Platform-dkh.1 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-ToolBox-dkh.139 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-FileTree-dkh.36 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-GitBasedRepository-dkh.13 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Bitbucket-dkh.5 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-GitHub-dkh.44 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'...finished 1.0.0-beta.32.18'
+--transcript--'*** Loading FileTree
+  From: filetree:///vagrant/3rdparty/gemstone/filetree/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfFileTree-dkh.4 --- filetree:///vagrant/3rdparty/gemstone/filetree/repository [1e44c08:HEAD] --- filetree:///vagrant/3rdparty/gemstone/filetree/repository'
+--transcript--'Loaded -> BaselineOfFileTree-dkh.4 --- filetree:///vagrant/3rdparty/gemstone/filetree/repository [1e44c08:HEAD] --- filetree:///vagrant/3rdparty/gemstone/filetree/repository'
+--transcript--'Loading baseline of BaselineOfFileTree...'
+--transcript--'...finished baseline'
+--transcript--'*** Loading Metacello
+  From: filetree:///vagrant/3rdparty/gemstone/metacello-work/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loaded -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loaded -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loading baseline of BaselineOfMetacello...'
+--transcript--'Fetched -> Metacello-Base-topa.124 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Core-EstebanLorenzano.832 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-MC-EstebanLorenzano.735 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.66 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-ToolBox-EstebanLorenzano.149 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-Cypress-TravisCI.7 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> Metacello-GitBasedRepository-dkh.21 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-GitHub-topa.46 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-Bitbucket-topa.6 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loaded -> Metacello-Base-topa.124 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Core-EstebanLorenzano.832 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-MC-EstebanLorenzano.735 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.66 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-ToolBox-EstebanLorenzano.149 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Cypress-TravisCI.7 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-GitBasedRepository-dkh.21 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-GitHub-topa.46 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Bitbucket-topa.6 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'...finished baseline'
+--transcript--'*** Loading Grease
+  From: filetree:///vagrant/3rdparty/gemstone/grease/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loaded -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Fetched -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loaded -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loading baseline of BaselineOfGrease...'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'Project: Core 0.247'
+--transcript--'Fetched -> Grease-Core-topa.109 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Fetched -> Grease-GemStone-Core-JohanBrichau.69 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Fetched -> Grease-GemStone300-Core-dkh.6 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loaded -> Grease-Core-topa.109 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Grease-GemStone-Core-JohanBrichau.69 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Grease-GemStone300-Core-dkh.6 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Evaluated -> Grease-GemStone300-Core >> initializeLatin1ToUtf8Encodings'
+--transcript--'...finished baseline'
+--transcript--'*** ZipArchive fuckery start'
+--transcript--'*** ZipArchive fuckery done'
+--transcript--'*** Loading GLASS1
+  From: filetree:///vagrant/3rdparty/gemstone/glass/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loaded -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loaded -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loading baseline of BaselineOfGLASS1...'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--' [1.0-alpha2.2]'
+--transcript--'Project: Gofer Core 1.0.2.1'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'Project: Core 0.247'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> GemStone-Interactions-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Core.v3-dkh.98 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Core322x-dkh.3 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Base-Bootstrap.v3-dkh.32 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Bootstrap.v34-dkh.262 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-ANSI-Streams-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-Indexing-Extensions.v34-dkh.5 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Sport3.010.v3-jupiter.33 --- http://seaside.gemtalksystems.com/ss/hyper --- http://seaside.gemtalksystems.com/ss/hyper'
+--transcript--'Fetched -> OB-GemStone-Platform-dkh.76 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Squeak.v34-dkh.341 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GsSqueakCommon-Core-dkh.20 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GsSqueakCommon-CoreV30-dkh.2 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GsSqueakCommon-TestsV30-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> PackageInfo-Base.g-dkh.41 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Monticello.v34-dkh.488 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-Deployment.v310-dkh.38 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Change-Notification.v310-dkh.27 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> OB-Standard.v3-dkh.450 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> OB-Monticello-dkh.105 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Utf8Encoding.310-dkh.33 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> SMTPMail-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Announcements.v3-dkh.19 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> OB-Tools.v33-dkh.145 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Evaluated -> 1.0-alpha2.2 [ConfigurationOfGoferProjectLoader] >> postLoadLoader'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'Loaded -> GemStone-Interactions-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Core'
+--transcript--'Loaded -> Core.v3-dkh.98 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Core322x-dkh.3 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Base-Bootstrap.v3-dkh.32 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Bootstrap.v34-dkh.262 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GemStone-ANSI-Streams-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GemStone-Indexing-Extensions.v34-dkh.5 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Sport3.010.v3-jupiter.33 --- http://seaside.gemtalksystems.com/ss/hyper --- http://seaside.gemtalksystems.com/ss/hyper'
+--transcript--'Loaded -> OB-GemStone-Platform-dkh.76 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Squeak'
+--transcript--'Loaded -> Squeak.v34-dkh.341 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GsSqueakCommon-Core-dkh.20 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GsSqueakCommon-CoreV30-dkh.2 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GsSqueakCommon-TestsV30-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> PackageInfo-Base.g-dkh.41 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'patching Monticello for load of trait support'
+--transcript--'Evaluated -> Monticello >> traitsMonticelloPreLoadDoIt'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Monticello'
+--transcript--'Loaded -> Monticello.v34-dkh.488 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GemStone-Deployment.v310-dkh.38 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Evaluated -> GemStone-Deployment >> deploymentPostLoadDoIt'
+--transcript--'Loaded -> Change-Notification.v310-dkh.27 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Standard'
+--transcript--'Loaded -> OB-Standard.v3-dkh.450 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> OB-Monticello-dkh.105 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Utf8Encoding.310-dkh.33 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> SMTPMail-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Announcements.v3-dkh.19 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Tools'
+--transcript--'Loaded -> OB-Tools.v33-dkh.145 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- reahl-development-machine:/vagrant/3rdparty/GemStone3.4'
+--transcript--'...finished baseline'
+--transcript--'*** There were warnings during load ***'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Core'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Squeak'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Monticello'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Standard'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Tools'
+--transcript--'Loading '
+--transcript--'BaselineOfGLASS1-dkh.63.mcz'
+--transcript--'Loading '
+--transcript--'BaselineOfGrease-JohanBrichau.1496564075.mcz'
+--transcript--'Loading '
+--transcript--'BaselineOfMetacello-EstebanLorenzano.97.mcz'
+--transcript--'*** Loading WonkaRuntime
+  From: filetree:///vagrant/monticello
+  Modes: anArray( #''overNetwork'')
+'
+--transcript--'Fetched -> BaselineOfWonkaRuntime-WillyWonka.8134 --- filetree:///vagrant/monticello --- filetree:///vagrant/monticello'
+--transcript--'Loaded -> BaselineOfWonkaRuntime-WillyWonka.8134 --- filetree:///vagrant/monticello --- filetree:///vagrant/monticello'
+--transcript--'Loading baseline of BaselineOfWonkaRuntime...'
+--transcript--'Fetched -> ConfigurationOfXMLSupport-monty.75 --- http://www.squeaksource.com/MetacelloRepository --- http://www.squeaksource.com/MetacelloRepository'
+--transcript--'Loaded -> ConfigurationOfXMLSupport-monty.75 --- http://www.squeaksource.com/MetacelloRepository --- http://www.squeaksource.com/MetacelloRepository'
+--transcript--'Fetched -> ConfigurationOfXMLPullParser-HernanMoralesDurand.12 --- http://smalltalkhub.com/mc/hernan/XMLPullParser/main --- http://smalltalkhub.com/mc/hernan/XMLPullParser/main'
+--transcript--'Loaded -> ConfigurationOfXMLPullParser-HernanMoralesDurand.12 --- http://smalltalkhub.com/mc/hernan/XMLPullParser/main --- http://smalltalkhub.com/mc/hernan/XMLPullParser/main'
+--transcript--'Fetched -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Loaded -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> ConfigurationOfMagritte3-StephanEggermont.119 --- github://GsDevKit/Magritte3:master/repository [daf2b1d:master] --- github://GsDevKit/Magritte3:master/repository'
+--transcript--'Loaded -> ConfigurationOfMagritte3-StephanEggermont.119 --- github://GsDevKit/Magritte3:master/repository [daf2b1d:master] --- github://GsDevKit/Magritte3:master/repository'
+--transcript--'Fetched -> (nearest) BaselineOfSeaside3-MarianoMartinezPeck.61 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Loaded -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> BaselineOfSOAP-dkh.3 --- github://JupiterJones/SOAP:cb098312b6f0cc46f89884cb904b3c60b17741fb/repository [cb09831:cb098312b6f0cc46f89884cb904b3c60b17741fb] --- github://JupiterJones/SOAP:cb098312b6f0cc46f89884cb904b3c60b17741fb/repository'
+--transcript--'Loaded -> BaselineOfSOAP-dkh.3 --- github://JupiterJones/SOAP:cb098312b6f0cc46f89884cb904b3c60b17741fb/repository [cb09831:cb098312b6f0cc46f89884cb904b3c60b17741fb] --- github://JupiterJones/SOAP:cb098312b6f0cc46f89884cb904b3c60b17741fb/repository'
+--transcript--'Fetched -> BaselineOfZincHTTPComponents-dkh.22 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Loaded -> BaselineOfZincHTTPComponents-dkh.22 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Project: XMLSupport 1.3.0'
+--transcript--'Fetched -> ConfigurationOfXMLParser-monty.319 --- http://smalltalkhub.com/mc/PharoExtras/XMLParser/main --- http://smalltalkhub.com/mc/PharoExtras/XMLParser/main'
+--transcript--'Loaded -> ConfigurationOfXMLParser-monty.319 --- http://smalltalkhub.com/mc/PharoExtras/XMLParser/main --- http://smalltalkhub.com/mc/PharoExtras/XMLParser/main'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: #''stable'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Project: XML-Parser stable'
+--transcript--' [3.2.8]'
+--transcript--'Fetched -> ConfigurationOfOrderPreservingDictionary-monty.43 --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main'
+--transcript--'Loaded -> ConfigurationOfOrderPreservingDictionary-monty.43 --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main'
+--transcript--'Fetched -> ConfigurationOfBitmapCharacterSet-monty.27 --- http://www.smalltalkhub.com/mc/PharoExtras/BitmapCharacterSet/main --- http://www.smalltalkhub.com/mc/PharoExtras/BitmapCharacterSet/main'
+--transcript--'Loaded -> ConfigurationOfBitmapCharacterSet-monty.27 --- http://www.smalltalkhub.com/mc/PharoExtras/BitmapCharacterSet/main --- http://www.smalltalkhub.com/mc/PharoExtras/BitmapCharacterSet/main'
+--transcript--'Project: BitmapCharacterSet stable'
+--transcript--' [1.2.6]'
+--transcript--'Fetched -> Collections-BitmapCharacterSet-monty.25 --- http://smalltalkhub.com/mc/PharoExtras/BitmapCharacterSet/main --- http://smalltalkhub.com/mc/PharoExtras/BitmapCharacterSet/main'
+--transcript--'Project: OrderPreservingDictionary 1.3.8'
+--transcript--'Fetched -> Collections-OrderPreservingDictionary-monty.33 --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main'
+--transcript--'Fetched -> Collections-OrderPreservingDictionary-GemstoneCompatibility-monty.1 --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main --- http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main'
+--transcript--'Fetched -> XML-Parser-monty.421 --- http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main --- http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main'
+--transcript--'Fetched -> XML-Parser-GemstoneCompatibility-monty.25 --- http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main --- http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: #''stable'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Project: Grease Core stable'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.247'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.247'
+--transcript--'Project: Core 0.247'
+--transcript--'Project: XML Parser 1.0.5'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: ''1.0-rc'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://www.squeaksource.com/MetacelloRepository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: ''1.0-rc'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://www.squeaksource.com/MetacelloRepository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease Core 1.0-rc'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Project: Seaside3 baseline'
+--transcript--'Fetched -> ConfigurationOfSwazoo2-dkh.62 --- http://smalltalkhub.com/mc/Swazoo/Swazoo/main --- http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
+--transcript--'Loaded -> ConfigurationOfSwazoo2-dkh.62 --- http://smalltalkhub.com/mc/Swazoo/Swazoo/main --- http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Grease-Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Grease-Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfZincHTTPComponents-dkh.22 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Loaded -> BaselineOfZincHTTPComponents-dkh.22 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Fetched -> BaselineOfGsApplicationTools-dkh.10 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Loaded -> BaselineOfGsApplicationTools-dkh.10 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Project: Swazoo2 stable'
+--transcript--' [2.2.0.7]'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.247'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease'';
+	versionString: #''stable'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Grease-Core'' );
+	repository: ''http://www.smalltalkhub.com/Seaside/MetacelloConfigurations''.^M  resolved in favor of existing'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.247'
+--transcript--'Project: Core 0.247'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease'';
+	versionString: #''stable'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Grease-Core'' );
+	repository: ''http://www.smalltalkhub.com/Seaside/MetacelloConfigurations''.^M  resolved in favor of existing'
+--transcript--'Project: Grease stable'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Fetched -> Swazoo-2.2.gemstone-dkh.38 --- http://seaside.gemtalksystems.com/ss/swazoo2 --- http://seaside.gemtalksystems.com/ss/swazoo2'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GLASS1 baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--' [1.0-alpha2.2]'
+--transcript--'! Blocking Downgrade Gofer 1.0.5.1 -> Gofer 1.0.2.1'
+--transcript--'! Blocking Downgrade Gofer 1.0.5.1 -> Gofer 1.0.2.1'
+--transcript--'Project: Gofer Core 1.0.2.1'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> Seaside-Squeak-Compatibility-JohanBrichau.2 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Grease-Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Fetched -> Seaside-Swazoo-pmm.20 --- http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main --- http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main'
+--transcript--'Fetched -> Seaside-Core-JohanBrichau.874 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone320-Core-dkh.1 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Core-JohanBrichau.82 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Basic-Development-JohanBrichau.33 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Adaptors-Swazoo-pmm.45 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Canvas-pmm.137 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Javascript-Core-pmm.99 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Javascript-GemStone-Core-dkh.5 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Prototype-Core-pmm.29 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Scriptaculous-Core-JohanBrichau.106 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Session-pmm.187 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Session-JohanBrichau.6 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Component-pmm.102 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Widgets-JohanBrichau.36 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Tools-Production-JohanBrichau.25 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-RenderLoop-pmm.99 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Tools-Core-pmm.30 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Flow-pmm.25 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Scriptaculous-Components-JohanBrichau.116 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Environment-JohanBrichau.85 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Environment-dkh.12 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Continuation-DaleHenrichs.20 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Flow-dkh.12 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Project: GsApplicationTools baseline'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GLASS1 baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> GsApplicationTools-Server-dkh.86 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Fetched -> GsApplicationTools-ServerV30-dkh.28 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Project: Zinc Project baseline'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' ''Announcements'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' ''Announcements'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGsApplicationTools-dkh.10 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Loaded -> BaselineOfGsApplicationTools-dkh.10 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Fetched -> Zinc-Character-Encoding-Core-dkh.46 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Fetched -> Zinc-Resource-Meta-Core-JohanBrichau.18 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' ''Announcements'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GLASS1 baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Project: GsApplicationTools baseline'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' ''Announcements'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' ''Announcements'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' ''Announcements'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GLASS1 baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> SocketStream-dkh.24 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Fetched -> Zinc-FileSystem-Legacy-dkh.8 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Fetched -> Zinc-HTTP-dkh.421 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Fetched -> Zinc-GemStone-Server-Tools-dkh.37 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Fetched -> Zinc-Seaside-JohanBrichau.43 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-GemServer-Core-dkh.10 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Adaptors-Zinc-JohanBrichau.19 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Adaptors-Swazoo-dkh.9 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Project: Magritte3 3.5.0'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.242'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease'';
+	versionString: #''release1.2'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfSeaside3 spec 
+	name: ''Seaside3'';
+	operator: #''='';
+	loads: #(''Core'' ''Scriptaculous'' ''Swazoo'' ''Zinc'' );
+	repository: ''github://SeasideSt/Seaside:v3.2.4/repository''.^M  and new: ConfigurationOfSeaside3 spec 
+	name: ''Seaside3'';
+	versionString: #''release3.1'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' ''Javascript'' ''RSS'' ''Filesystem'' ''Welcome'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease'';
+	versionString: #''release1.2'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Project: Grease release1.2'
+--transcript--'Conflict between existing: BaselineOfSeaside3 spec 
+	name: ''Seaside3'';
+	operator: #''='';
+	loads: #(''Core'' ''Scriptaculous'' ''Swazoo'' ''Zinc'' );
+	repository: ''github://SeasideSt/Seaside:v3.2.4/repository''.^M  and new: ConfigurationOfSeaside3 spec 
+	name: ''Seaside3'';
+	versionString: #''release3.1'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' ''Javascript'' ''RSS'' ''Filesystem'' ''Welcome'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Project: Seaside3 release3.1'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' ''Announcements'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' ''Announcements'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfZincHTTPComponents-dkh.22 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Loaded -> BaselineOfZincHTTPComponents-dkh.22 --- github://GsDevKit/zinc:v2.4.3.6/repository [cce282c:v2.4.3.6] --- github://GsDevKit/zinc:v2.4.3.6/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Grease-Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Grease-Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGsApplicationTools-dkh.10 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Loaded -> BaselineOfGsApplicationTools-dkh.10 --- github://GsDevKit/gsApplicationTools:v1.0.9/repository [898232b:v1.0.9] --- github://GsDevKit/gsApplicationTools:v1.0.9/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease Core Tests'';
+	className: ''BaselineOfGrease'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core Tests'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease Core Tests'';
+	className: ''BaselineOfGrease'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core Tests'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Swazoo2 stable'
+--transcript--'Conflict between existing: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''default'' ''Base'' ''Announcements'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/glass/repository''.^M  and new: BaselineOfGLASS1 spec 
+	name: ''GLASS1'';
+	loads: #(''Base'' );
+	repository: ''github://glassdb/glass:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GLASS1 baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Grease-Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' ''Grease-Core'' ''Core'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease Core Tests'';
+	className: ''BaselineOfGrease'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core Tests'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease Core Tests baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Fetched -> Grease-Tests-Core-JohanBrichau.116 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Fetched -> Grease-Tests-GemStone-Core.v32-dkh.16 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Fetched -> Seaside-FileSystem-JohanBrichau.30 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-FileSystem-MarianoMartinezPeck.2 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Tests-Core-pmm.309 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Tests-GemStone-Core-JohanBrichau.18 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> RSS-Core-pmm.71 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> JQuery-Core-JohanBrichau.139 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> JQuery-UI-pmm.95 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Javascript-Tests-Core-JohanBrichau.73 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Tools-Web-JohanBrichau.129 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Tools-Web-DaleHenrichs.4 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-Development-pmm.166 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+--transcript--'Fetched -> Seaside-GemStone-Development-JohanBrichau.34 --- github://SeasideSt/Seaside:v3.2.4/repository [1f39762:v3.2.4] --- github://SeasideSt/Seaside:v3.2.4/repository'
+ERROR 2010 , a MessageNotUnderstood occurred (error 2010), a DataStream does not understand  #'writeWordLike:' (MessageNotUnderstood)
+topaz > exec iferr 1 : exit 
+Logging out session 1.
+--- 01/01/2018 08:10:07.789 UTC Logging out
