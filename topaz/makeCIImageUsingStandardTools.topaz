@@ -1,0 +1,23 @@
+iferror exit
+
+set user DataCurator password swordfish gemstone gs64stone
+
+login
+
+run
+  Gofer new
+    package: 'GsUpgrader-Core';
+    url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
+    load.
+  (Smalltalk at: #GsUpgrader) upgradeGrease.
+%
+
+run
+  wonkaOverNetwork ifTrue: [
+    "do the fetch, into cache repo"
+  ]
+%
+
+run
+  "do the load (using repositoryOverrides iff wonkaOverNetwork)"
+%

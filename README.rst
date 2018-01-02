@@ -26,3 +26,13 @@ The idea is to be able to give it a production extent too, in which case it will
 
 .. warning:: The code represents several attempts by several people over the years to work around all kinds of problems while trying to do this. Its not pretty. 
 
+
+Using only standard tools
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default this loads using WonkaLoader, but passing -s to `./bootstrap_image.sh` makes it use topaz/makeCIImageUsingStandardTools.topaz
+instead, which only uses standard tools.
+
+
+
+             

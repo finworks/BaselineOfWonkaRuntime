@@ -11,3 +11,5 @@ run
    System commitTransaction
 %
 
+exit
+

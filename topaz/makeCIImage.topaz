@@ -17,7 +17,7 @@ run
      autoMigrate: false;
      commitOnAlmostOutOfMemoryDuring: [
 	WonkaLoader
-	    loadWonkaRuntimeGroup: 'Core'
+	    loadWonkaRuntimeGroup: 'CI'
 	    fromWonkaRoot: wonkaRoot
 	    platform: wonkaPlatformName
 	    overNetwork: wonkaOverNetwork
