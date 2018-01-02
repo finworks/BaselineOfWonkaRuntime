@@ -6,12 +6,24 @@ This is just an extract of some of our scripts that can be used to
 load all our 3rdparty dependencies into an image, based on our
 baseline: BaselineOfWonkaProjects.
 
-It does not work in its current state, but save for the baseline..st 
-method itself, it has been in use on GS3.2 from some years now, 
-albeit not in "over the network" mode.
+.. warning:: The code represents several attempts by several people
+             over the years to work around all kinds of problems while
+             trying to do this. Its not pretty.
 
-.. warning:: The code represents several attempts by several people over the years to work around all kinds of problems while trying to do this. Its not pretty. 
+Status
+~~~~~~
 
+The code as per the first commit (note the baseline..st in it) has
+been in use for a few years on GS3.2 but it stopped working in "over
+the network mode".
+
+As per this commit, I got it to load using WonkaLoader on GS3.4 and
+3.2 overTheNetwork by adding the DataStream and DoubleByteString
+methods as extensions.
+
+I don't have it working loading via a more simple straight usage of
+GsUpgrader and Monticello fetch/load ... which I would have liked to
+do.
 
 To play with it:
 ~~~~~~~~~~~~~~~~
