@@ -29,7 +29,6 @@ echo Using options from: $SETUP_OPTIONS
 echo Using load script:: $LOAD_SCRIPT
 
 set -x
-exit 0
 
 stopstone -i -t 1 gs64stone DataCurator swordfish || true
 kill -9 $(pidof stoned) || true

@@ -18,6 +18,20 @@ baseline: spec
 		     repository: 'http://www.squeaksource.com/MetacelloRepository';
 		     loads: #('Core')
 		];
+                configuration: 'XMLWriter' with: [
+		   spec
+		     versionString: '2.8.3';
+                     repository: 'http://smalltalkhub.com/mc/PharoExtras/XMLWriter/main';
+		     operator: #=;
+		     loads: #('Core')
+                ];
+                configuration: 'OrderPreservingDictionary' with: [
+		   spec
+		     versionString: '1.3.8';
+                     repository: 'http://smalltalkhub.com/mc/PharoExtras/OrderPreservingDictionary/main';
+		     operator: #=;
+		     loads: #('Core')
+                ];
 		baseline: 'Seaside3' with: [
 		   spec
 		      repository: 'github://SeasideSt/Seaside:v3.2.4/repository';
@@ -35,7 +49,7 @@ baseline: spec
 		      repository: 'github://GsDevKit/Magritte3/repository';
 		      versionString: '3.5.0';
 		      operator: #=;
-		      loads: #('Seaside').
+		      loads: #('Seaside' 'Deprecated').
 		];
 		project: 'XMLPullParser' with: [ 
 		  spec
@@ -83,7 +97,7 @@ baseline: spec
 		      file: 'HudsonBuildTools-lr.53';
 		      repository: 'http://www.smalltalkhub.com/mc/pdebruic/HudsonBuildTools/main'
 		];
-                group: 'Core' with: #('Seaside3' 'Magritte3' 'CSV' 'XMLPullParser' 'Pier-EditorEnh' 'XMLSupport');
+                group: 'Core' with: #('Seaside3' 'Magritte3' 'CSV' 'XMLPullParser' 'Pier-EditorEnh' 'XMLSupport' 'XMLWriter');
                 group: 'default' with: #('Core');
                 group: 'AcceptanceTesting' with: #('Core' 'SeasideDevelopment');
                 group: 'CI' with: #('AcceptanceTesting' 'HudsonBuildTools' 'WebTester-Selenium') ];
