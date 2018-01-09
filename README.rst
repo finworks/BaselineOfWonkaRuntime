@@ -57,3 +57,19 @@ instead, which only uses standard tools.
 
 
              
+Some stuff regarding WonkaLoader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In loadWonkaRuntimeGroup:fromWonkaRoot:platform:overNetwork: 
+
+the group is a group defined in BaselineOfWonkaRuntime
+wonkaRoot is just the root of our application's git repository
+platform is something like 'GemStone3.2', 'GemStone3.4', 'pharo'
+
+The project source is structured like this:
+
+ wonkaRoot/ 3rdparty/GemStone3.4  (cache directory for GS3.4)
+            3rdparty/GemStone3.2  (cache directory for GS3.2)
+            3rdparty/gemstone     (git submodules for each repo we cloned)
+            3rdparty/pharo        (cache directory for pharo)
+            monticello/           (filetree repository for our own code)
