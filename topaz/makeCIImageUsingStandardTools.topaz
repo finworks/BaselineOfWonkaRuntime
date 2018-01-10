@@ -5,6 +5,14 @@ set user DataCurator password swordfish gemstone gs64stone
 login
 
 run
+   Gofer it
+     repository: (MCFileTreeRepository new directory: (ServerFileDirectory on: wonkaRoot, '/monticello'));
+     package: 'BaselineOfWonkaRuntime';
+     load.
+   System commitTransaction
+%
+
+run
   Gofer new
     package: 'GsUpgrader-Core';
     url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
@@ -13,11 +21,22 @@ run
 %
 
 run
-  wonkaOverNetwork ifTrue: [
-    "do the fetch, into cache repo"
-  ]
+  wonkaOverNetwork
+    ifTrue: [
+      Metacello new 
+        baseline: 'WonkaRuntime';
+        repository: 'filetree://', wonkaRoot, '/monticello';
+        cacheRepository: wonkaRoot, '/3rdparty/GemStone3.4';
+        get.
+
+      Metacello new 
+        baseline: 'WonkaRuntime';
+        repository: 'filetree://', wonkaRoot, '/monticello';
+        cacheRepository: wonkaRoot, '/3rdparty/GemStone3.4';
+        load: 'CI'.
+    ]
+    ifFalse: [
+      0 halt: 'not done yet'
+    ]
 %
 
-run
-  "do the load (using repositoryOverrides iff wonkaOverNetwork)"
-%
