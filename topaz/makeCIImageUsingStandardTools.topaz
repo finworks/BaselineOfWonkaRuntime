@@ -1,10 +1,12 @@
-iferror exit
+iferror stack 200
+display oops
 
 set user DataCurator password swordfish gemstone gs64stone
 
 login
 
 run
+   Transcript show: 'Initial Gofer load of baseline'; cr.
    Gofer it
      repository: (MCFileTreeRepository new directory: (ServerFileDirectory on: wonkaRoot, '/monticello'));
      package: 'BaselineOfWonkaRuntime';
@@ -13,6 +15,7 @@ run
 %
 
 run
+  Transcript show: 'Phase 1: upgrade using GsUpgrader'; cr.
   Gofer new
     package: 'GsUpgrader-Core';
     url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
@@ -21,22 +24,120 @@ run
 %
 
 run
-  wonkaOverNetwork
-    ifTrue: [
-      Metacello new 
-        baseline: 'WonkaRuntime';
-        repository: 'filetree://', wonkaRoot, '/monticello';
-        cacheRepository: wonkaRoot, '/3rdparty/GemStone3.4';
-        get.
+  | metacello createOnVersionChangeBlock projectNamesAndWantedVersions computeProjectNamesAndWantedVersions |
 
-      Metacello new 
-        baseline: 'WonkaRuntime';
-        repository: 'filetree://', wonkaRoot, '/monticello';
-        cacheRepository: wonkaRoot, '/3rdparty/GemStone3.4';
-        load: 'CI'.
-    ]
+
+  computeProjectNamesAndWantedVersions := [
+	" This abomination tries to introspect BaselineOf... and find all configurations and baselines we depend on, and their version. 
+	This looks like it could be heavily refactored not to break Metacello encapsulation so much. "
+
+	| baselineClassName baselineClass packagesAndProjectsWeWant projectsWeWant result |
+        
+	baselineClassName := 'BaselineOfWonkaRuntime'.
+	baselineClass := Smalltalk at: baselineClassName asSymbol.
+	baselineClass isNil
+		ifTrue: [ self error: 'Cannot compute dependencies of ' , baselineClassName , ' since it has not been loaded yet.' ].
+	result := Dictionary new.
+	packagesAndProjectsWeWant := (baselineClass project map at: 'baseline') spec packagesSpec list
+		collect: [ :each | each spec ].
+	projectsWeWant := (packagesAndProjectsWeWant select: [ :each | each isKindOf: MetacelloProjectReferenceSpec ])
+		collect: [ :each | each projectReference ].
+	(projectsWeWant select: [ :each | each className notNil ])
+		do: [ :each | result at: each className put: each versionString ].
+	result ].
+
+  Transcript show: 'Compute wanted names and versions'; cr.
+  projectNamesAndWantedVersions := computeProjectNamesAndWantedVersions value.
+
+        
+  createOnVersionChangeBlock := [ :default :description|
+     [ :ex :existingRegistration :newRegistration | 
+       | wantedVersion className |
+       className := (existingRegistration configurationProjectSpec ifNil: [ existingRegistration baselineProjectSpec ])
+               className.
+       wantedVersion := projectNamesAndWantedVersions at: className ifAbsent: [ nil ].
+
+       wantedVersion isNil
+         ifTrue: [ ^ default ]
+         ifFalse: [
+             " Fixme: this does not take into account the fact that a symbolic version may be an alias for another version number "
+             (existingRegistration version asString = wantedVersion)
+                ifTrue: [ 
+                        Transcript show:
+                                        description , ' ' , existingRegistration nameAndVersionString , ' -> ' , newRegistration nameAndVersionString; cr.
+                        ex allow ]
+                ifFalse: [ 
+                        Transcript show:
+                                        '! Blocking ' , description , ' ' , existingRegistration nameAndVersionString , ' -> '
+                                                , newRegistration nameAndVersionString; cr.
+                        ex disallow ]
+          ]
+  ]] .
+                      
+
+  metacello := Metacello new 
+           baseline: 'WonkaRuntime';
+           repository: 'filetree://', wonkaRoot, '/monticello';
+           onLock: [ :ex | 
+                   Transcript show:
+                                   'LOCK ENFORCED: Attempt to ' , ex operationString printString , ' new project: ' , ex newProjectRegistration printString
+                                           , ' when existing project: ' , ex existingProjectRegistration printString , ' is locked.'; cr.
+                   ex allow ];
+                   
+           onConflict: [ :ex :existingRegistration :newRegistration | 
+                   " Stick with what we've got. Unless we're upgrading configurations to baselines, which we always consider to be an improvement. "
+                   | useNew existingProjectSpec newProjectSpec |
+                   existingProjectSpec := (existingRegistration baselineProjectSpec ifNil: [ existingRegistration configurationProjectSpec ]).
+                   newProjectSpec := (newRegistration baselineProjectSpec ifNil: [ newRegistration configurationProjectSpec ]).
+                   useNew := (existingProjectSpec className beginsWith: 'ConfigurationOf')
+                           and: [ newProjectSpec className beginsWith: 'BaselineOf' ].
+                   Transcript show:
+                                   'Conflict between existing: ' , existingProjectSpec className , ' ' , existingProjectSpec printString
+                                           , Character cr asString , '  and new: ' , newProjectSpec className , ' ' , newProjectSpec printString
+                                           , Character cr asString , '  resolved in favor of '
+                                           ,
+                                                   (useNew
+                                                           ifTrue: [ 'new' ]
+                                                           ifFalse: [ 'existing' ]); cr.
+                   useNew
+                           ifTrue: [ ex allow ]
+                           ifFalse: [ ex disallow ]];
+                           
+           onUpgrade: (createOnVersionChangeBlock value: true value: 'Upgrade');
+           onDowngrade: (createOnVersionChangeBlock value: false value: 'Downgrade');
+           onWarning: [ :ex | 
+                            Transcript show: ex description; cr.
+                            ex resume ].
+
+
+ Transcript show: 'Phase 2: fetch/load project dependencies'; cr.
+
+ wonkaOverNetwork
+    ifTrue: [
+      GsDeployer deploy: [
+         Transcript show: 'Getting baseline'; cr.
+         metacello copy
+           cacheRepository: 'filetree://', wonkaRoot, '/3rdparty/GemStone3.4';
+           get.
+
+         Transcript show: 'Load using cache repository'; cr.
+         metacello copy
+           cacheRepository: 'filetree://', wonkaRoot, '/3rdparty/GemStone3.4';
+           load: 'CI'.
+      ]]
     ifFalse: [
-      0 halt: 'not done yet'
-    ]
+      GsDeployer deploy: [
+         Transcript show: 'Load using repositoryOverrides'; cr.
+         metacello copy
+           repositoryOverrides: {'filetree://', wonkaRoot, '/3rdparty/gemstone/filetree/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/metacello-work/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/gsUpgrader/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/grease/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/glass/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/GemStone3.4'};
+           load: 'CI'.
+      ]]
 %
+
+
 
