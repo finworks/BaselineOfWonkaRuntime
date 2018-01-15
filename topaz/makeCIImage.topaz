@@ -1,4 +1,5 @@
-iferror exit
+iferror stack 200
+display oops
 
 set user DataCurator password swordfish gemstone gs64stone
 
