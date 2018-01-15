@@ -5,4 +5,4 @@ loadDirectiveForDebugging
 	version := self project latestVersion
 		ignoreImage: true;
 		yourself.
-	^ (version record: 'Tests') loadDirective
+	^ (version record: 'CI') loadDirective

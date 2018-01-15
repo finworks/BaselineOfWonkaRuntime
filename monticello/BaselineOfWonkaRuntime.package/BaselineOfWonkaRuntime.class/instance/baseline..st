@@ -130,7 +130,7 @@ baseline: spec
                        repository: webTesterRepository;
                        requires: #('WebTester-Selenium') ];
                group: 'Core' with: #('ZincHTTPComponents' 'CommandShell' 'SoapOpera');
-               group: 'Tests' with: #('WebTester-Pharo-Selenium' 'Magritte3 Tools') ];
+               group: 'CI' with: #('WebTester-Pharo-Selenium' 'Magritte3 Tools') ];
         for: #gemstone do: [ 
             spec
 		baseline: 'SOAP' with: [ 
