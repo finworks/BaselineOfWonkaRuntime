@@ -1,0 +1,1655 @@
+Starting from extent: /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/bin/extent0.seaside.dbf
+Using options from: topaz/setupNoNetwork.topaz
+Using load script:: topaz/makeCIImageUsingStandardTools.topaz
++ stopstone -i -t 1 gs64stone DataCurator swordfish
+--- 01/15/2018 15:35:13.138 UTC ---
+stopstone[Info]: GemStone version '3.4.0'
+stopstone[Info]: initiating 'gs64stone' shutdown...
+--- 01/15/2018 15:35:15.147 UTC Login
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libfloss-3.4.0-64.so
+[Info]: Gave this process preference for OOM killer: wrote to /proc/25008/oom_score_adj value 250
+--- 01/15/2018 15:35:15.411 UTC ---
+stopstone[Info]: Waiting up to 1 seconds for all other processes to detach the shared page cache.
+--- 01/15/2018 15:35:16.484 UTC ---
+stopstone[Warning]: The timeout interval (1 seconds) has expired.
+stopstone[Warning]: 4 processes are still attached to the shared page cache.
++ true
+++ pidof stoned
++ kill -9
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
++ true
++ cp /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/bin/extent0.seaside.dbf /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/extent0.dbf
++ chmod u+rw /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/extent0.dbf
++ startstone gs64stone -N
+startstone[Info]: GemStone version '3.4.0'
+startstone[Info]: Starting Stone repository monitor gs64stone.
+startstone[Info]: GEMSTONE is: '/opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux'.
+startstone[Info]:
+    GEMSTONE_SYS_CONF=/opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf
+    GEMSTONE_EXE_CONF=/vagrant/gs64stone.conf
+stoned[Info]: Log file is '/opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/gs64stone.log'.
+startstone[Info]: GemStone server gs64stone has been started, process 25016
++ false
++ topaz -l
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libgcilnk-3.4.0-64.so
+ _____________________________________________________________________________
+|                             Configuration Files                             |
+|                                                                             |
+| System File: /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf |
+|                                                                             |
+| Executable File: /vagrant/gem.conf                                          |
+| Warning:  File not found (errno=2,ENOENT, The file or directory specified cannot
+| be found)                                                                   |
+|           using defaults.                                                   |
+|_____________________________________________________________________________|
+Reading config file /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf
+ _____________________________________________________________________________
+|               Gem Configuration Options for process id 25067                |
+|_____________________________________________________________________________|
+
+DUMP_OPTIONS = TRUE;
+GEM_ABORT_MAX_CRS = 0;
+GEM_CACHE_WARMER_ARGS = "";
+GEM_CACHE_WARMER_MID_CACHE_ARGS = "";
+GEM_COMPRESS_TRANLOG_RECORDS = TRUE;
+GEM_FREE_FRAME_CACHE_SIZE = -1;
+GEM_FREE_FRAME_LIMIT = -1;
+GEM_FREE_PAGEIDS_CACHE = 200;
+GEM_HALT_ON_ERROR = -1;
+GEM_KEEP_MIN_SOFTREFS = 0;
+GEM_KERBEROS_KEYTAB_FILE = "";
+GEM_KEYRING_DIRS = "";
+GEM_MAX_SMALLTALK_STACK_DEPTH = 1000;
+GEM_NATIVE_CODE_ENABLED = 2;
+GEM_PRIVATE_PAGE_CACHE_KB = 960KB;
+GEM_PGSVR_COMPRESS_PAGE_TRANSFERS = FALSE;
+GEM_PGSVR_FREE_FRAME_CACHE_SIZE = -1;
+GEM_PGSVR_FREE_FRAME_LIMIT = -1;
+GEM_PGSVR_UPDATE_CACHE_ON_READ = FALSE;
+GEM_PGSVR_USE_SSL = FALSE;
+GEM_READ_AUTH_ERR_STUBS = FALSE;
+GEM_REPOSITORY_IN_MEMORY = FALSE;
+GEM_RPC_KEEPALIVE_INTERVAL = 0;
+GEM_RPCGCI_TIMEOUT = 0;
+GEM_RPC_USE_SSL = TRUE;
+GEM_SOFTREF_CLEANUP_PERCENT_MEM = 50;
+GEM_STATMONITOR_ARGS = "";
+GEM_STATMONITOR_MID_CACHE_ARGS = "";
+GEM_TEMPOBJ_AGGRESSIVE_STUBBING = TRUE;
+GEM_TEMPOBJ_CACHE_SIZE = 50000KB;
+GEM_TEMPOBJ_CONSECUTIVE_MARKSWEEP_LIMIT = 50;
+GEM_TEMPOBJ_MESPACE_SIZE = 0;
+GEM_TEMPOBJ_OOMSTATS_CSV = FALSE;
+GEM_TEMPOBJ_OOPMAP_SIZE = 0;
+GEM_TEMPOBJ_SCOPES_SIZE = 2000;
+GEM_TEMPOBJ_POMGEN_SIZE = 0;
+GEM_TEMPOBJ_POMGEN_PRUNE_ON_VOTE = 50;
+GEM_TEMPOBJ_POMGEN_SCAVENGE_INTERVAL = 1800;
+GEM_TEMPOBJ_START_ADDR not used on this platform
+LOG_WARNINGS = TRUE;
+SHR_NUM_FREE_FRAME_SERVERS = -1;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_POLICY = 0;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_SIZE_MB = 0;
+SHR_PAGE_CACHE_LOCKED = FALSE;
+SHR_PAGE_CACHE_NUM_PROCS = 65529;
+SHR_PAGE_CACHE_NUM_SHARED_COUNTERS = 1900;
+SHR_PAGE_CACHE_PERMISSIONS = 660;
+SHR_PAGE_CACHE_SIZE_KB = 75000KB;
+SHR_TARGET_FREE_FRAME_COUNT = -1;
+SHR_WELL_KNOWN_PORT_NUMBER = 0;
+CONFIG_WARNINGS_FATAL = FALSE;
+(vmGc spaceSizes: eden init 2048K max 9344K , survivor init 448K max 1600K,
+ vmGc    old max 37440K, code max 10048K, perm max 5056K, pom 10 * 4224K = 42240K,
+ vmGc    remSet 1156K, meSpace max 51532K oopMapSize 262144  max footprint 164M)
+ _____________________________________________________________________________
+|             GemStone/S64 Object-Oriented Data Management System             |
+|                   Copyright (C) GemTalk Systems 1986-2017                   |
+|                            All rights reserved.                             |
+|                           Covered by U.S Patents:                           |
+|            6,256,637 Transactional virtual machine architecture             |
+|              6,360,219 Object queues with concurrent updating               |
+|                  6,567,905 Generational Garbage Collector.                  |
+| 6,681,226 Selective Pessimistic Locking for a Concurrently Updateable Database
++-----------------------------------------------------------------------------+
+|    PROGRAM: topaz, Linear GemStone Interface (Linked Session)               |
+|    VERSION: 3.4.0, Thu Oct 19 11:19:41 2017                                 |
+|      BUILD: gss64_3_4_x_branch-42785                                        |
+|  BUILT FOR: x86-64 (Linux)                                                  |
+|       MODE: 64 bit                                                          |
+| RUNNING ON: 4-CPU reahl-development-machine x86_64 (Linux 4.4.0-104-generic |
+| #127-Ubuntu SMP Mon Dec 11 12:16:42 UTC 2017) 7651MB                        |
+| PROCESS ID: 25067     DATE: 01/15/2018 15:35:20 UTC                         |
+|   USER IDS: REAL=vagrant (1000) EFFECTIVE=vagrant (1000) LOGIN=vagrant (1000)
+|_____________________________________________________________________________|
+Warning, executable configuration file not found
+    /vagrant/gem.conf
+
+neither .topazini nor $HOME/.topazini were found
+topaz> iferror exit
+topaz> 
+topaz> set user DataCurator password swordfish gemstone gs64stone
+topaz> 
+topaz> login
+[Info]: LNK client/gem GCI levels = 34001/34001
+--- 01/15/2018 15:35:19.687 UTC Login
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libfloss-3.4.0-64.so
+[Info]: User ID: DataCurator
+[Info]: Repository: gs64stone
+[Info]: Session ID: 5
+[Info]: GCI Client Host: <Linked>
+[Info]: Page server PID: -1
+[Info]: using libicu version 58.2
+[Info]: Gave this process preference for OOM killer: wrote to /proc/25067/oom_score_adj value 250
+[01/15/2018 15:35:19.704 UTC]
+  gci login: currSession 1  linked session 
+successful login
+ fileformat is now utf8
+sourcestringclass is now Unicode16 
+topaz 1> 
+topaz 1> run
+   UserGlobals at: #wonkaOverNetwork put: false.
+   UserGlobals at: #wonkaRoot put: '/vagrant'.
+   UserGlobals at: #wonkaPlatformName put: 'GemStone3.4'.
+   System commitTransaction
+%
+true
+topaz 1> 
+topaz 1> exit
+Logging out session 1.
+--- 01/15/2018 15:35:19.719 UTC Logging out
++ topaz -l
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libgcilnk-3.4.0-64.so
+ _____________________________________________________________________________
+|                             Configuration Files                             |
+|                                                                             |
+| System File: /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf |
+|                                                                             |
+| Executable File: /vagrant/gem.conf                                          |
+| Warning:  File not found (errno=2,ENOENT, The file or directory specified cannot
+| be found)                                                                   |
+|           using defaults.                                                   |
+|_____________________________________________________________________________|
+Reading config file /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf
+ _____________________________________________________________________________
+|               Gem Configuration Options for process id 25071                |
+|_____________________________________________________________________________|
+
+DUMP_OPTIONS = TRUE;
+GEM_ABORT_MAX_CRS = 0;
+GEM_CACHE_WARMER_ARGS = "";
+GEM_CACHE_WARMER_MID_CACHE_ARGS = "";
+GEM_COMPRESS_TRANLOG_RECORDS = TRUE;
+GEM_FREE_FRAME_CACHE_SIZE = -1;
+GEM_FREE_FRAME_LIMIT = -1;
+GEM_FREE_PAGEIDS_CACHE = 200;
+GEM_HALT_ON_ERROR = -1;
+GEM_KEEP_MIN_SOFTREFS = 0;
+GEM_KERBEROS_KEYTAB_FILE = "";
+GEM_KEYRING_DIRS = "";
+GEM_MAX_SMALLTALK_STACK_DEPTH = 1000;
+GEM_NATIVE_CODE_ENABLED = 2;
+GEM_PRIVATE_PAGE_CACHE_KB = 960KB;
+GEM_PGSVR_COMPRESS_PAGE_TRANSFERS = FALSE;
+GEM_PGSVR_FREE_FRAME_CACHE_SIZE = -1;
+GEM_PGSVR_FREE_FRAME_LIMIT = -1;
+GEM_PGSVR_UPDATE_CACHE_ON_READ = FALSE;
+GEM_PGSVR_USE_SSL = FALSE;
+GEM_READ_AUTH_ERR_STUBS = FALSE;
+GEM_REPOSITORY_IN_MEMORY = FALSE;
+GEM_RPC_KEEPALIVE_INTERVAL = 0;
+GEM_RPCGCI_TIMEOUT = 0;
+GEM_RPC_USE_SSL = TRUE;
+GEM_SOFTREF_CLEANUP_PERCENT_MEM = 50;
+GEM_STATMONITOR_ARGS = "";
+GEM_STATMONITOR_MID_CACHE_ARGS = "";
+GEM_TEMPOBJ_AGGRESSIVE_STUBBING = TRUE;
+GEM_TEMPOBJ_CACHE_SIZE = 50000KB;
+GEM_TEMPOBJ_CONSECUTIVE_MARKSWEEP_LIMIT = 50;
+GEM_TEMPOBJ_MESPACE_SIZE = 0;
+GEM_TEMPOBJ_OOMSTATS_CSV = FALSE;
+GEM_TEMPOBJ_OOPMAP_SIZE = 0;
+GEM_TEMPOBJ_SCOPES_SIZE = 2000;
+GEM_TEMPOBJ_POMGEN_SIZE = 0;
+GEM_TEMPOBJ_POMGEN_PRUNE_ON_VOTE = 50;
+GEM_TEMPOBJ_POMGEN_SCAVENGE_INTERVAL = 1800;
+GEM_TEMPOBJ_START_ADDR not used on this platform
+LOG_WARNINGS = TRUE;
+SHR_NUM_FREE_FRAME_SERVERS = -1;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_POLICY = 0;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_SIZE_MB = 0;
+SHR_PAGE_CACHE_LOCKED = FALSE;
+SHR_PAGE_CACHE_NUM_PROCS = 65529;
+SHR_PAGE_CACHE_NUM_SHARED_COUNTERS = 1900;
+SHR_PAGE_CACHE_PERMISSIONS = 660;
+SHR_PAGE_CACHE_SIZE_KB = 75000KB;
+SHR_TARGET_FREE_FRAME_COUNT = -1;
+SHR_WELL_KNOWN_PORT_NUMBER = 0;
+CONFIG_WARNINGS_FATAL = FALSE;
+(vmGc spaceSizes: eden init 2048K max 9344K , survivor init 448K max 1600K,
+ vmGc    old max 37440K, code max 10048K, perm max 5056K, pom 10 * 4224K = 42240K,
+ vmGc    remSet 1156K, meSpace max 51568K oopMapSize 262144  max footprint 164M)
+ _____________________________________________________________________________
+|             GemStone/S64 Object-Oriented Data Management System             |
+|                   Copyright (C) GemTalk Systems 1986-2017                   |
+|                            All rights reserved.                             |
+|                           Covered by U.S Patents:                           |
+|            6,256,637 Transactional virtual machine architecture             |
+|              6,360,219 Object queues with concurrent updating               |
+|                  6,567,905 Generational Garbage Collector.                  |
+| 6,681,226 Selective Pessimistic Locking for a Concurrently Updateable Database
++-----------------------------------------------------------------------------+
+|    PROGRAM: topaz, Linear GemStone Interface (Linked Session)               |
+|    VERSION: 3.4.0, Thu Oct 19 11:19:41 2017                                 |
+|      BUILD: gss64_3_4_x_branch-42785                                        |
+|  BUILT FOR: x86-64 (Linux)                                                  |
+|       MODE: 64 bit                                                          |
+| RUNNING ON: 4-CPU reahl-development-machine x86_64 (Linux 4.4.0-104-generic |
+| #127-Ubuntu SMP Mon Dec 11 12:16:42 UTC 2017) 7651MB                        |
+| PROCESS ID: 25071     DATE: 01/15/2018 15:35:20 UTC                         |
+|   USER IDS: REAL=vagrant (1000) EFFECTIVE=vagrant (1000) LOGIN=vagrant (1000)
+|_____________________________________________________________________________|
+Warning, executable configuration file not found
+    /vagrant/gem.conf
+
+neither .topazini nor $HOME/.topazini were found
+topaz> iferror stack 200
+topaz> display oops
+topaz> 
+topaz> set user DataCurator password swordfish gemstone gs64stone
+topaz> 
+topaz> login
+[Info]: LNK client/gem GCI levels = 34001/34001
+--- 01/15/2018 15:35:20.263 UTC Login
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libfloss-3.4.0-64.so
+[Info]: User ID: DataCurator
+[Info]: Repository: gs64stone
+[Info]: Session ID: 6
+[Info]: GCI Client Host: <Linked>
+[Info]: Page server PID: -1
+[Info]: using libicu version 58.2
+[Info]: Gave this process preference for OOM killer: wrote to /proc/25071/oom_score_adj value 250
+[01/15/2018 15:35:20.328 UTC]
+  gci login: currSession 1  linked session 
+successful login
+ fileformat is now utf8
+sourcestringclass is now Unicode16 
+topaz 1> 
+topaz 1> run
+   Transcript show: 'Initial Gofer load of baseline'; cr.
+   Gofer it
+     repository: (MCFileTreeRepository new directory: (ServerFileDirectory on: wonkaRoot, '/monticello'));
+     package: 'BaselineOfWonkaRuntime';
+     load.
+   System commitTransaction
+%
+--transcript--'Initial Gofer load of baseline'
+[268 sz:0 cls: 68097 Boolean] true
+topaz 1> 
+topaz 1> run
+  Transcript show: 'Phase 1: upgrade using GsUpgrader'; cr.
+  Gofer new
+    package: 'GsUpgrader-Core';
+    url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
+    load.
+  (Smalltalk at: #GsUpgrader) upgradeGrease.
+%
+--transcript--'Phase 1: upgrade using GsUpgrader'
+--transcript--'======================'
+--transcript--'=====Loading Metacello Preview'
+--transcript--'Loading 1.0-beta.32.3 of ConfigurationOfMetacello...'
+--transcript--'Project: FileTree stable'
+--transcript--' [1.0.6.1]'
+--transcript--'Project: Monticello 0.243'
+--transcript--' [0.244.3]'
+--transcript--'Fetched -> MonticelloFileTree-Core.gemstone24-dkh.164 --- http://ss3.gemtalksystems.com/ss/FileTree --- http://ss3.gemtalksystems.com/ss/FileTree'
+--transcript--'Project: GsMonticello 0.244.2'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Base-dkh.109 --- http://seaside.gemtalksystems.com/ss/metacello --- http://seaside.gemtalksystems.com/ss/metacello'
+--transcript--'Fetched -> Metacello-Core-dkh.695 --- http://seaside.gemtalksystems.com/ss/metacello --- http://seaside.gemtalksystems.com/ss/metacello'
+--transcript--'Fetched -> Metacello-MC-dkh.680 --- http://seaside.gemtalksystems.com/ss/metacello --- http://seaside.gemtalksystems.com/ss/metacello'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.33 --- http://seaside.gemtalksystems.com/ss/metacello --- http://seaside.gemtalksystems.com/ss/metacello'
+--transcript--'Fetched -> Metacello-ToolBox-dkh.134 --- http://smalltalkhub.com/mc/dkh/metacello/main --- http://smalltalkhub.com/mc/dkh/metacello/main'
+--transcript--'Project: GsCore 0.247'
+--transcript--' [0.250]'
+--transcript--'Fetched -> Metacello-GitHub-dkh.29 --- http://seaside.gemtalksystems.com/ss/metacello --- http://seaside.gemtalksystems.com/ss/metacello'
+--transcript--'Loaded -> MonticelloFileTree-Core.gemstone24-dkh.164 --- http://ss3.gemtalksystems.com/ss/FileTree --- cache'
+--transcript--'Loaded -> Metacello-Base-dkh.109 --- http://seaside.gemtalksystems.com/ss/metacello --- cache'
+--transcript--'Loaded -> Metacello-Core-dkh.695 --- http://seaside.gemtalksystems.com/ss/metacello --- cache'
+--transcript--'Evaluated -> Metacello-MC >> gemstone10beta24PreLoadDoIt'
+--transcript--'Loaded -> Metacello-MC-dkh.680 --- http://seaside.gemtalksystems.com/ss/metacello --- cache'
+--transcript--'Warning: This package depends on the following classes:
+  ExecutableBlock
+You must resolve these dependencies before you will be able to load these definitions: 
+  ExecutableBlock>>valueSupplyingMetacelloAnswers:
+'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.33 --- http://seaside.gemtalksystems.com/ss/metacello --- cache'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-ToolBox-dkh.134 --- http://smalltalkhub.com/mc/dkh/metacello/main --- cache'
+--transcript--'Loaded -> Metacello-GitHub-dkh.29 --- http://seaside.gemtalksystems.com/ss/metacello --- cache'
+--transcript--'Evaluated -> 1.0-beta.32.3 [ConfigurationOfMetacello] >> metacelloPrimeRegistry'
+--transcript--'...finished 1.0-beta.32.3'
+--transcript--'Fetched -> ConfigurationOfMetacelloPreview-dkh.60 --- github://dalehenrich/metacello-work:configuration --- github://dalehenrich/metacello-work:configuration'
+--transcript--'Loaded -> ConfigurationOfMetacelloPreview-dkh.60 --- github://dalehenrich/metacello-work:configuration --- github://dalehenrich/metacello-work:configuration'
+--transcript--'Loading 1.0.0-beta.32.18 of ConfigurationOfMetacelloPreview...'
+--transcript--'Fetched -> BaselineOfMetacello-dkh.85 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Loaded -> BaselineOfMetacello-dkh.85 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Project: Metacello baseline'
+--transcript--'Fetched -> BaselineOfFileTree-dkh.4 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Loaded -> BaselineOfFileTree-dkh.4 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> MonticelloFileTree-Core-dkh.199 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Fetched -> MonticelloFileTree-FileDirectory-Utilities-dkh.15 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Base-dkh.123 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Core-dkh.807 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-MC-dkh.722 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.56 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GS3x-Platform-dkh.1 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-ToolBox-dkh.139 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-FileTree-dkh.36 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GitBasedRepository-dkh.13 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Bitbucket-dkh.5 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GitHub-dkh.44 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Loaded -> MonticelloFileTree-Core-dkh.199 --- github://dalehenrich/filetree:gemstone2.4/repository --- cache'
+--transcript--'Loaded -> MonticelloFileTree-FileDirectory-Utilities-dkh.15 --- github://dalehenrich/filetree:gemstone2.4/repository --- cache'
+--transcript--'Loaded -> Metacello-Base-dkh.123 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Core-dkh.807 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-MC-dkh.722 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.56 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-GS3x-Platform-dkh.1 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-ToolBox-dkh.139 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-FileTree-dkh.36 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository [31d16e9:master] --- cache'
+--transcript--'Loaded -> Metacello-GitBasedRepository-dkh.13 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository [31d16e9:master] --- cache'
+--transcript--'Loaded -> Metacello-Bitbucket-dkh.5 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository [31d16e9:master] --- cache'
+--transcript--'Loaded -> Metacello-GitHub-dkh.44 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository [7deb62a:7deb62a415343f8ba8294c84c9c3438c75455fe3] --- cache'
+--transcript--'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'...finished 1.0.0-beta.32.18'
+--transcript--'Migrated 0 instances for 10 classes.'
+--transcript--'======================'
+--transcript--'=====Upgrading Metacello'
+--transcript--'Fetched -> BaselineOfMetacello-EstebanLorenzano.97 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Loaded -> BaselineOfMetacello-EstebanLorenzano.97 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> BaselineOfMetacello-EstebanLorenzano.97 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Loaded -> BaselineOfMetacello-EstebanLorenzano.97 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Loading baseline of BaselineOfMetacello...'
+--transcript--'Fetched -> Metacello-Base-topa.124 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Core-EstebanLorenzano.832 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> Metacello-MC-EstebanLorenzano.735 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.66 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> Metacello-ToolBox-EstebanLorenzano.149 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> Metacello-Cypress-TravisCI.7 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> Metacello-GitBasedRepository-dkh.21 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> Metacello-GitHub-topa.46 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Fetched -> Metacello-Bitbucket-topa.6 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- github://dalehenrich/metacello-work:master/repository'
+--transcript--'Loaded -> Metacello-Base-topa.124 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-Core-EstebanLorenzano.832 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-MC-EstebanLorenzano.735 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.66 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-ToolBox-EstebanLorenzano.149 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-Cypress-TravisCI.7 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-GitBasedRepository-dkh.21 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-GitHub-topa.46 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Loaded -> Metacello-Bitbucket-topa.6 --- github://dalehenrich/metacello-work:master/repository [2f5cd0f:master] --- cache'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'...finished baseline'
+--transcript--'No instance migrations performed.'
+--transcript--'======================'
+--transcript--'=====Installing Grease'
+--transcript--'Fetched -> BaselineOfGrease-JohanBrichau.1496564075 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Loaded -> BaselineOfGrease-JohanBrichau.1496564075 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Fetched -> BaselineOfGrease-JohanBrichau.1496564075 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Loaded -> BaselineOfGrease-JohanBrichau.1496564075 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Loading baseline of BaselineOfGrease...'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'Project: Core 0.247'
+--transcript--'Fetched -> Grease-Core-topa.109 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Fetched -> Grease-GemStone-Core-JohanBrichau.69 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Fetched -> Grease-GemStone300-Core-dkh.6 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- github://GsDevKit/Grease:master/repository'
+--transcript--'Loaded -> Grease-Core-topa.109 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- cache'
+--transcript--'Loaded -> Grease-GemStone-Core-JohanBrichau.69 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- cache'
+--transcript--'Loaded -> Grease-GemStone300-Core-dkh.6 --- github://GsDevKit/Grease:master/repository [6973d2b:master] --- cache'
+--transcript--'Evaluated -> Grease-GemStone300-Core >> initializeLatin1ToUtf8Encodings'
+--transcript--'...finished baseline'
+--transcript--'Migrated 0 instances for 3 classes.'
+--transcript--'======================'
+--transcript--'=====Locking Grease'
+--transcript--'No instance migrations performed.'
+[55176961 sz:19 cls: 55177217 GsUpgrader class] GsUpgrader
+topaz 1> 
+topaz 1> run
+  | metacello createOnVersionChangeBlock projectNamesAndWantedVersions computeProjectNamesAndWantedVersions |
+
+
+  computeProjectNamesAndWantedVersions := [
+	" This abomination tries to introspect BaselineOf... and find all configurations and baselines we depend on, and their version. 
+	This looks like it could be heavily refactored not to break Metacello encapsulation so much. "
+
+	| baselineClassName baselineClass packagesAndProjectsWeWant projectsWeWant result |
+        
+	baselineClassName := 'BaselineOfWonkaRuntime'.
+	baselineClass := Smalltalk at: baselineClassName asSymbol.
+	baselineClass isNil
+		ifTrue: [ self error: 'Cannot compute dependencies of ' , baselineClassName , ' since it has not been loaded yet.' ].
+	result := Dictionary new.
+	packagesAndProjectsWeWant := (baselineClass project map at: 'baseline') spec packagesSpec list
+		collect: [ :each | each spec ].
+	projectsWeWant := (packagesAndProjectsWeWant select: [ :each | each isKindOf: MetacelloProjectReferenceSpec ])
+		collect: [ :each | each projectReference ].
+	(projectsWeWant select: [ :each | each className notNil ])
+		do: [ :each | result at: each className put: each versionString ].
+	result ].
+
+  Transcript show: 'Compute wanted names and versions'; cr.
+  projectNamesAndWantedVersions := computeProjectNamesAndWantedVersions value.
+
+        
+  createOnVersionChangeBlock := [ :default :description|
+     [ :ex :existingRegistration :newRegistration | 
+       | wantedVersion className wants |
+       className := (existingRegistration configurationProjectSpec ifNil: [ existingRegistration baselineProjectSpec ])
+               className.
+       wantedVersion := projectNamesAndWantedVersions at: className ifAbsent: [ nil ].
+
+       " Fixme: this does not take into account the fact that a symbolic version may be an alias for another version number "
+       wants := wantedVersion isNil ifTrue: [ default ] ifFalse: [ existingRegistration version asString = wantedVersion ].
+       wants
+          ifTrue: [ 
+                  Transcript show:
+                                  description , ' ' , existingRegistration nameAndVersionString , ' -> ' , newRegistration nameAndVersionString; cr.
+                  ex allow ]
+          ifFalse: [ 
+                  Transcript show:
+                                  '! Blocking ' , description , ' ' , existingRegistration nameAndVersionString , ' -> '
+                                          , newRegistration nameAndVersionString; cr.
+                  ex disallow ]
+  ]] .
+                      
+
+  metacello := Metacello new 
+           baseline: 'WonkaRuntime';
+           repository: 'filetree://', wonkaRoot, '/monticello';
+           onLock: [ :ex | 
+                   Transcript show:
+                                   'LOCK ENFORCED: Attempt to ' , ex operationString printString , ' new project: ' , ex newProjectRegistration printString
+                                           , ' when existing project: ' , ex existingProjectRegistration printString , ' is locked.'; cr.
+                   ex allow ];
+                   
+           onConflict: [ :ex :existingRegistration :newRegistration | 
+                   " Stick with what we've got. Unless we're upgrading configurations to baselines, which we always consider to be an improvement. "
+                   | useNew existingProjectSpec newProjectSpec |
+                   existingProjectSpec := (existingRegistration baselineProjectSpec ifNil: [ existingRegistration configurationProjectSpec ]).
+                   newProjectSpec := (newRegistration baselineProjectSpec ifNil: [ newRegistration configurationProjectSpec ]).
+                   useNew := (existingProjectSpec className beginsWith: 'ConfigurationOf')
+                           and: [ newProjectSpec className beginsWith: 'BaselineOf' ].
+                   Transcript show:
+                                   'Conflict between existing: ' , existingProjectSpec className , ' ' , existingProjectSpec printString
+                                           , Character cr asString , '  and new: ' , newProjectSpec className , ' ' , newProjectSpec printString
+                                           , Character cr asString , '  resolved in favor of '
+                                           ,
+                                                   (useNew
+                                                           ifTrue: [ 'new' ]
+                                                           ifFalse: [ 'existing' ]); cr.
+                   useNew
+                           ifTrue: [ ex allow ]
+                           ifFalse: [ ex disallow ]];
+                           
+           onUpgrade: (createOnVersionChangeBlock value: true value: 'Upgrade');
+           onDowngrade: (createOnVersionChangeBlock value: false value: 'Downgrade');
+           onWarning: [ :ex | 
+                            Transcript show: ex description; cr.
+                            ex resume ].
+
+
+ Transcript show: 'Phase 2: fetch/load project dependencies'; cr.
+
+ wonkaOverNetwork
+    ifTrue: [
+      GsDeployer deploy: [
+         Transcript show: 'Getting baseline'; cr.
+         metacello copy
+           cacheRepository: 'filetree://', wonkaRoot, '/3rdparty/GemStone3.4';
+           get.
+
+         Transcript show: 'Load using cache repository'; cr.
+         metacello copy
+           cacheRepository: 'filetree://', wonkaRoot, '/3rdparty/GemStone3.4';
+           load: 'CI'.
+      ]]
+    ifFalse: [
+      GsDeployer deploy: [
+         Transcript show: 'Load using repositoryOverrides'; cr.
+         metacello copy
+           repositoryOverrides: {'filetree://', wonkaRoot, '/3rdparty/gemstone/filetree/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/metacello-work/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/gsUpgrader/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/grease/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/gemstone/glass/repository'.
+                                 'filetree://', wonkaRoot, '/3rdparty/GemStone3.4'};
+           load: 'CI'.
+      ]].
+    System commitTransaction
+   
+%
+--transcript--'Compute wanted names and versions'
+--transcript--'Phase 2: fetch/load project dependencies'
+--transcript--'Load using repositoryOverrides'
+--transcript--'Fetched -> BaselineOfWonkaRuntime-WillyWonka.8134 --- filetree:///vagrant/monticello [31d16e9:master] --- filetree:///vagrant/monticello'
+--transcript--'Loaded -> BaselineOfWonkaRuntime-WillyWonka.8134 --- filetree:///vagrant/monticello [31d16e9:master] --- filetree:///vagrant/monticello'
+--transcript--'Loading baseline of BaselineOfWonkaRuntime...'
+--transcript--'Fetched -> ConfigurationOfXMLPullParser-HernanMoralesDurand.12 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfXMLPullParser-HernanMoralesDurand.12 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> (nearest) BaselineOfSeaside3-MarianoMartinezPeck.61 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> ConfigurationOfXMLSupport-monty.75 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfXMLSupport-monty.75 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> ConfigurationOfMagritte3-StephanEggermont.119 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfMagritte3-StephanEggermont.119 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> (nearest) BaselineOfSeaside3-MarianoMartinezPeck.61 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfSeaside3-MarianoMartinezPeck.61 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> ConfigurationOfXMLWriter-monty.120 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfXMLWriter-monty.120 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> BaselineOfSOAP-dkh.3 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfSOAP-dkh.3 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> BaselineOfZincHTTPComponents-dkh.22 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfZincHTTPComponents-dkh.22 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Project: XMLSupport 1.3.0'
+--transcript--'Fetched -> ConfigurationOfXMLParser-monty.319 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfXMLParser-monty.319 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #();
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: #''stable'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Project: XML-Parser stable'
+--transcript--' [3.2.8]'
+--transcript--'Fetched -> ConfigurationOfOrderPreservingDictionary-monty.43 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfOrderPreservingDictionary-monty.43 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> ConfigurationOfBitmapCharacterSet-monty.27 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> ConfigurationOfBitmapCharacterSet-monty.27 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Project: BitmapCharacterSet stable'
+--transcript--' [1.2.6]'
+--transcript--'Fetched -> Collections-BitmapCharacterSet-monty.25 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Project: OrderPreservingDictionary 1.3.8'
+--transcript--'Fetched -> Collections-OrderPreservingDictionary-monty.33 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Fetched -> Collections-OrderPreservingDictionary-GemstoneCompatibility-monty.1 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Fetched -> XML-Parser-monty.421 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Fetched -> XML-Parser-GemstoneCompatibility-monty.25 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #();
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: #''stable'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main''.^M  resolved in favor of existing'
+--transcript--'Project: Grease Core stable'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.247'
+--transcript--'! Blocking Downgrade GsCore 0.250 -> GsCore 0.247'
+--transcript--'Project: Core 0.247'
+--transcript--'Project: XML Parser 1.0.5'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #();
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: ''1.0-rc'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://www.squeaksource.com/MetacelloRepository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #();
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  and new: ConfigurationOfGrease spec 
+	name: ''Grease Core'';
+	className: ''ConfigurationOfGrease'';
+	versionString: ''1.0-rc'';
+	preLoadDoIt: nil;
+	postLoadDoIt: nil;
+	loads: #(''Core'' );
+	repository: ''http://www.squeaksource.com/MetacelloRepository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease Core 1.0-rc'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Project: XMLWriter 2.8.3'
+--transcript--'Project: OrderPreservingDictionary stable'
+--transcript--' [1.3.8]'
+--transcript--'Fetched -> XML-Writer-Core-monty.73 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Fetched -> XML-Writer-GemstoneCompatibility-monty.7 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Project: Seaside3 baseline'
+--transcript--'Fetched -> (nearest) BaselineOfZincHTTPComponents-dkh.22 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfZincHTTPComponents-dkh.22 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Fetched -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loaded -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- cache'
+--transcript--'Fetched -> BaselineOfGsApplicationTools-dkh.10 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> BaselineOfGsApplicationTools-dkh.10 --- filetree:///vagrant/3rdparty/GemStone3.4 [31d16e9:master] --- cache'
+--transcript--'Project: GLASS1 baseline'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--' [1.0-alpha2.2]'
+--transcript--'! Blocking Downgrade Gofer 1.0.5.1 -> Gofer 1.0.2.1'
+--transcript--'! Blocking Downgrade Gofer 1.0.5.1 -> Gofer 1.0.2.1'
+--transcript--'Project: Gofer Core 1.0.2.1'
+--transcript--'Upgrade Gofer 1.0.5.1 -> Gofer stable'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--'Project: SMTPMail stable'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Project: Metacello baseline'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> GemStone-Interactions-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Core.v3-dkh.98 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Core322x-dkh.3 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-Compression-dkh.7 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Base-Bootstrap.v3-dkh.32 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Bootstrap.v34-dkh.262 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-ANSI-Streams-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-Indexing-Extensions.v34-dkh.5 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'...RETRY'
+--transcript--'...RETRY'
+-----------------------------------------------------
+GemStone: Error         Nonfatal
+a UserDefinedError occurred (error 2318), reason:halt, Class category name 'Sport' for the class 'SpAbstractError' is inconsistent with the package name 'Sport3.010.v3'
+Error Category: 231169 [GemStone] Number: 2318  Arg Count: 1 Context : 143498497 exception : 143854593
+Arg 1: [20 sz:0 cls: 76289 UndefinedObject] nil
+topaz > exec iferr 1 : stack 200 
+==> 1 UserDefinedError (AbstractException) >> _signalWith: @6 line 25   [methId 4438273]
+    receiver [143854593 sz:15 cls: 132609 UserDefinedError] a UserDefinedError occurred (error 2318), reason:halt, Class category name 'Sport' for the class 'SpAbstractError' is inconsistent with the package name 'Sport3.010.v3'
+    inCextensionArg [20 sz:0 cls: 76289 UndefinedObject] nil
+    res [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+2 UserDefinedError (AbstractException) >> signal @2 line 47   [methId 4438785]
+    receiver [143854593 sz:15 cls: 132609 UserDefinedError] a UserDefinedError occurred (error 2318), reason:halt, Class category name 'Sport' for the class 'SpAbstractError' is inconsistent with the package name 'Sport3.010.v3'
+(skipped 2 evaluationTemps)
+3 MCFileTreeStCypressReader (Object) >> error:  @6 line 7   [methId 4092417]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    messageString [144283905 sz:113 cls: 74753 String] Class category name 'Sport' for the class 'SpAbstractError' is inconsistent with the package name 'Sport3.010.v3'
+(skipped 2 evaluationTemps)
+4 MCFileTreeStCypressReader >> validateClassCategory:for: @16 line 11   [methId 128899073]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    categoryName [144296193 sz:5 cls: 74753 String] Sport
+    className [144217345 sz:15 cls: 74753 String] SpAbstractError
+    prefix [144266753 sz:13 cls: 154369 Unicode7] Sport3.010.v3
+(skipped 2 evaluationTemps)
+5 MCFileTreeStCypressReader >> addClassDefinitionFrom:comment: @15 line 16   [methId 128898817]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    classPropertiesDict [143424001 sz:40 cls: 101377 Dictionary] aDictionary
+    classComment [143415809 sz:0 cls: 74753 String] 
+    typeSymbolOrArray [3191041 sz:6 cls: 110849 Symbol] normal
+    categoryName [144296193 sz:5 cls: 74753 String] Sport
+    className [144217345 sz:15 cls: 74753 String] SpAbstractError
+(skipped 3 evaluationTemps)
+    _VC [144276737 sz:4 cls: 134913 VariableContext] aVariableContext
+6 MCFileTreeStCypressReader >> addClassAndMethodDefinitionsFromEntry: @20 line 26   [methId 130393857]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    classEntry [143722241 sz:6 cls: 36627201 DirectoryEntry] aDirectoryEntry
+    classDirectory [143463169 sz:1 cls: 36622081 ServerFileDirectory] aServerFileDirectory
+    classPropertiesDict [143424001 sz:40 cls: 101377 Dictionary] aDictionary
+    classComment [142983425 sz:0 cls: 154369 Unicode7] 
+    entries [143563777 sz:4 cls: 66817 Array] anArray
+    methodPropertiesDict [143449089 sz:26 cls: 101377 Dictionary] aDictionary
+    propertyEntry [142975745 sz:6 cls: 36627201 DirectoryEntry] aDirectoryEntry
+    commentEntry [143489281 sz:6 cls: 36627201 DirectoryEntry] aDirectoryEntry
+    propertyEntry [143584257 sz:6 cls: 36627201 DirectoryEntry] aDirectoryEntry
+(skipped 3 evaluationTemps)
+    _VC [143773953 sz:7 cls: 134913 VariableContext] aVariableContext
+7 [] in MCFileTreeStCypressReader >> addClassAndMethodDefinitionsFromDirectory: @11 line 5   [methId 128389633]
+    self [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    receiver [143772673 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    entry [143722241 sz:6 cls: 36627201 DirectoryEntry] aDirectoryEntry
+    self [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 3 evaluationTemps)
+    _VC [143748609 sz:4 cls: 134913 VariableContext] aVariableContext
+8 Array (Collection) >> do:                     @6 line 10   [methId 2448385]
+    receiver [143770369 sz:28 cls: 66817 Array] anArray
+    aBlock [143772673 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
+(skipped 4 evaluationTemps)
+9 MCFileTreeStCypressReader >> addClassAndMethodDefinitionsFromDirectory: @4 line 3   [methId 128421377]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    aDirectory [143448577 sz:1 cls: 36622081 ServerFileDirectory] aServerFileDirectory
+(skipped 3 evaluationTemps)
+    _VC [143748609 sz:4 cls: 134913 VariableContext] aVariableContext
+10 MCFileTreeStCypressReader >> loadDefinitions  @16 line 11   [methId 128424193]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    entries [143770625 sz:4 cls: 66817 Array] anArray
+    directory [144190977 sz:1 cls: 36622081 ServerFileDirectory] aServerFileDirectory
+(skipped 2 evaluationTemps)
+11 MCFileTreeStCypressReader (MCVersionReader) >> definitions @3 line 2   [methId 38907137]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+12 MCFileTreeStCypressReader (MCVersionReader) >> snapshot @2 line 2   [methId 38907649]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 2 evaluationTemps)
+13 MCFileTreeStCypressReader >> basicVersion     @5 line 5   [methId 128900609]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 5 evaluationTemps)
+14 MCFileTreeStCypressReader (MCVersionReader) >> version @2 line 2   [methId 38905601]
+    receiver [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+15 [] in MCFileBasedRepository >> loadVersionFromFileNamed: @5 line 2   [methId 44415489]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [41391105 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    r [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+16 [] in MCFileTreeRepository >> versionReaderForFileNamed:do: @13 line 10   [methId 128980737]
+    self [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    receiver [144313345 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    s [144087809 sz:1 cls: 36622081 ServerFileDirectory] aServerFileDirectory
+    aBlock [41391105 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    self [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    reader [144223745 sz:11 cls: 119237633 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    class [119237633 sz:19 cls: 118381057 MCFileTreeStCypressReader class] MCFileTreeStCypressReader
+    aString [143737345 sz:21 cls: 154369 Unicode7] Sport3.010.v3.package
+(skipped 2 evaluationTemps)
+    _VC [143844097 sz:6 cls: 134913 VariableContext] aVariableContext
+17 MCFileTreeRepository >> readStreamForFileNamed:do: @3 line 2   [methId 118583041]
+    receiver [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    aString [143737345 sz:21 cls: 154369 Unicode7] Sport3.010.v3.package
+    aBlock [144313345 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 2 evaluationTemps)
+18 MCFileTreeRepository >> versionReaderForFileNamed:do: @3 line 3   [methId 128867841]
+    receiver [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    aString [143737345 sz:21 cls: 154369 Unicode7] Sport3.010.v3.package
+    aBlock [41391105 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 4 evaluationTemps)
+    _VC [143844097 sz:6 cls: 134913 VariableContext] aVariableContext
+19 MCFileTreeRepository (MCFileBasedRepository) >> loadVersionFromFileNamed: @2 line 2   [methId 38912257]
+    receiver [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    aString [143737345 sz:21 cls: 154369 Unicode7] Sport3.010.v3.package
+(skipped 3 evaluationTemps)
+20 [] in MCFileTreeRepository >> goferVersionFrom: @44 line 29   [methId 128981761]
+    self [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    receiver [144071169 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    packageDirectory [144069121 sz:1 cls: 36622081 ServerFileDirectory] aServerFileDirectory
+    aVersionReference [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    self [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+(skipped 3 evaluationTemps)
+    _VC [144071681 sz:5 cls: 134913 VariableContext] aVariableContext
+21 Array (Collection) >> do:                     @6 line 10   [methId 2448385]
+    receiver [144065537 sz:123 cls: 66817 Array] anArray
+    aBlock [144071169 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [170 sz:0 cls: 74241 SmallInteger] 21 == 0x15
+(skipped 4 evaluationTemps)
+22 MCFileTreeRepository >> goferVersionFrom:     @8 line 23   [methId 128867585]
+    receiver [143768577 sz:6 cls: 56712961 MCFileTreeRepository] aMCFileTreeRepository
+    aVersionReference [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    packageDirectories [144065537 sz:123 cls: 66817 Array] anArray
+(skipped 2 evaluationTemps)
+    _VC [144071681 sz:5 cls: 134913 VariableContext] aVariableContext
+23 MetacelloCachingGoferResolvedReference (GoferResolvedReference) >> version @3 line 4   [methId 40582657]
+    receiver [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+(skipped 2 evaluationTemps)
+24 MetacelloCachingGoferResolvedReference >> version @3 line 4   [methId 40523265]
+    receiver [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+(skipped 1 evaluationTemps)
+25 [] in MetacelloFetchingMCSpecLoader >> resolveDependencies:nearest:into: @46 line 28   [methId 136723457]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [136083713 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    each [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+(skipped 1 evaluationTemps)
+26 OrderedCollection (Collection) >> do:         @6 line 10   [methId 2448385]
+    receiver [143745025 sz:1 cls: 92673 OrderedCollection] anOrderedCollection
+    aBlock [136083713 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
+(skipped 4 evaluationTemps)
+27 [] in MetacelloFetchingMCSpecLoader >> resolveDependencies:nearest:into: @39 line 28   [methId 134906625]
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [143417089 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    notDone [268 sz:0 cls: 68097 Boolean] true
+    block [143416833 sz:5 cls: 143361 ExecBlock] anExecBlock
+    nearestReference [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    aCollection [143745025 sz:1 cls: 92673 OrderedCollection] anOrderedCollection
+(skipped 3 evaluationTemps)
+    _VC [144139777 sz:11 cls: 134913 VariableContext] aVariableContext
+28 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [143417089 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [130817 sz:19 cls: 627201 Error class] Error
+    handlerBlock [144212225 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+29 MetacelloFetchingMCSpecLoader >> resolveDependencies:nearest:into: @16 line 31   [methId 131644929]
+    receiver [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    aResolvedReference [143447809 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    nearestReference [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    aCollection [143745025 sz:1 cls: 92673 OrderedCollection] anOrderedCollection
+    block [143416833 sz:5 cls: 143361 ExecBlock] anExecBlock
+    retryCount [26 sz:0 cls: 74241 SmallInteger] 3 == 0x3
+    coll [143785729 sz:0 cls: 92673 OrderedCollection] anOrderedCollection
+    notDone [268 sz:0 cls: 68097 Boolean] true
+(skipped 4 evaluationTemps)
+    _VC [144139777 sz:11 cls: 134913 VariableContext] aVariableContext
+30 [] in MetacelloFetchingMCSpecLoader >> linearLoadPackageSpec:gofer: @42 line 51   [methId 134907649]
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [143582977 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    references [143587073 sz:1 cls: 66817 Array] anArray
+    nearestReference [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    cachedReference [20 sz:0 cls: 76289 UndefinedObject] nil
+    externalReference [143447809 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    mcVersion [20 sz:0 cls: 76289 UndefinedObject] nil
+    loadedVersionInfos [60774401 sz:1 cls: 66817 Array] anArray
+    nearestReference [144068353 sz:7 cls: 36558081 MetacelloCachingGoferResolvedReference] aMetacelloCachingGoferResolvedReference
+    gofer [142982145 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpec [142969345 sz:12 cls: 36555521 MetacelloPackageSpec] aMetacelloPackageSpec
+    cachedReference [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 4 evaluationTemps)
+    _VC [142981633 sz:6 cls: 134913 VariableContext] aVariableContext
+31 MetacelloGemStonePlatform (MetacelloPlatform) >> do:displaying: @2 line 3   [methId 130043649]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [143582977 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aString [143781633 sz:33 cls: 74753 String] Fetching Sport3.010.v3-jupiter.33
+(skipped 1 evaluationTemps)
+32 MetacelloFetchingMCSpecLoader >> linearLoadPackageSpec:gofer: @6 line 3   [methId 131645697]
+    receiver [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpec [142969345 sz:12 cls: 36555521 MetacelloPackageSpec] aMetacelloPackageSpec
+    gofer [142982145 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+(skipped 6 evaluationTemps)
+    _VC [143603201 sz:6 cls: 134913 VariableContext] aVariableContext
+33 MetacelloPackageSpec >> loadUsing:gofer:      @2 line 3   [methId 131752705]
+    receiver [142969345 sz:12 cls: 36555521 MetacelloPackageSpec] aMetacelloPackageSpec
+    aLoader [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    gofer [142982145 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+(skipped 3 evaluationTemps)
+34 [] in MetacelloCommonMCSpecLoader >> linearLoadPackageSpecs:repositories: @14 line 6   [methId 134796545]
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [144186881 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    pkg [142969345 sz:12 cls: 36555521 MetacelloPackageSpec] aMetacelloPackageSpec
+    gofer [142982145 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 4 evaluationTemps)
+    _VC [143743745 sz:5 cls: 134913 VariableContext] aVariableContext
+35 OrderedCollection (Collection) >> do:         @6 line 10   [methId 2448385]
+    receiver [144265217 sz:40 cls: 92673 OrderedCollection] anOrderedCollection
+    aBlock [144186881 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [114 sz:0 cls: 74241 SmallInteger] 14 == 0xe
+(skipped 4 evaluationTemps)
+36 MetacelloFetchingMCSpecLoader (MetacelloCommonMCSpecLoader) >> linearLoadPackageSpecs:repositories: @6 line 6   [methId 132528641]
+    receiver [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpecs [144265217 sz:40 cls: 92673 OrderedCollection] anOrderedCollection
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+    gofer [142982145 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+(skipped 3 evaluationTemps)
+    _VC [143743745 sz:5 cls: 134913 VariableContext] aVariableContext
+37 [] in MetacelloFetchingMCSpecLoader >> linearLoadPackageSpecs:repositories: @8 line 4   [methId 134902273]
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [143413761 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+    packageSpecs [144265217 sz:40 cls: 92673 OrderedCollection] anOrderedCollection
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 4 evaluationTemps)
+    _VC [143422977 sz:6 cls: 134913 VariableContext] aVariableContext
+38 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [143413761 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [143773441 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+39 MetacelloLoaderPolicy >> pushLoadDirective:during: @7 line 7   [methId 131762945]
+    receiver [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    aLoaderDirective [144086529 sz:3 cls: 36571905 MetacelloLinearLoadDirective] aMetacelloLinearLoadDirective
+    aBlock [143413761 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    oldRoot [143742721 sz:3 cls: 36571905 MetacelloLinearLoadDirective] aMetacelloLinearLoadDirective
+(skipped 3 evaluationTemps)
+    _VC [141031681 sz:5 cls: 134913 VariableContext] aVariableContext
+40 MetacelloLoaderPolicy >> pushLinearLoadDirectivesDuring:for: @3 line 3   [methId 131763457]
+    receiver [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    aBlock [143413761 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aLoader [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 3 evaluationTemps)
+41 MetacelloFetchingMCSpecLoader >> linearLoadPackageSpecs:repositories: @4 line 4   [methId 131641857]
+    receiver [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpecs [144265217 sz:40 cls: 92673 OrderedCollection] anOrderedCollection
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+(skipped 4 evaluationTemps)
+    _VC [143422977 sz:6 cls: 134913 VariableContext] aVariableContext
+42 MetacelloFetchingMCSpecLoader (MetacelloCommonMCSpecLoader) >> load @16 line 7   [methId 132528385]
+    receiver [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    repos [143777281 sz:6 cls: 66817 Array] anArray
+(skipped 3 evaluationTemps)
+43 MetacelloMCVersionSpecLoader >> load          @14 line 21   [methId 131660289]
+    receiver [144061441 sz:5 cls: 36576001 MetacelloMCVersionSpecLoader] aMetacelloMCVersionSpecLoader
+    mcLoader [143772161 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 2 evaluationTemps)
+    _VC [144061697 sz:5 cls: 134913 VariableContext] aVariableContext
+44 MetacelloMCVersion >> executeLoadFromArray:   @10 line 7   [methId 131624449]
+    receiver [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [144056577 sz:5 cls: 102401 Set] aSet
+    loader [144061441 sz:5 cls: 36576001 MetacelloMCVersionSpecLoader] aMetacelloMCVersionSpecLoader
+(skipped 1 evaluationTemps)
+45 [] in MetacelloMCVersion >> fetchRequiredFromArray: @34 line 11   [methId 136289281]
+    self [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144053761 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    anArray [144056577 sz:5 cls: 102401 Set] aSet
+    self [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 3 evaluationTemps)
+    _VC [144054273 sz:7 cls: 134913 VariableContext] aVariableContext
+46 [] in MetacelloPlatform >> useStackCacheDuring:defaultDictionary: @14 line 9   [methId 134501121]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144047873 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    aBlock [144053761 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [144048385 sz:5 cls: 134913 VariableContext] aVariableContext
+47 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144047873 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [143828993 sz:2 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [143830529 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+48 MetacelloGemStonePlatform (MetacelloPlatform) >> useStackCacheDuring:defaultDictionary: @10 line 10   [methId 130596609]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [144053761 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    defaultDictionary [143836417 sz:26 cls: 101377 Dictionary] aDictionary
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+(skipped 6 evaluationTemps)
+    _VC [144048385 sz:5 cls: 134913 VariableContext] aVariableContext
+49 [] in MetacelloMCVersion >> fetchRequiredFromArray: @30 line 11   [methId 136721665]
+    self [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [143839745 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    newLoader [143869441 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    self [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 4 evaluationTemps)
+    _VC [144054273 sz:7 cls: 134913 VariableContext] aVariableContext
+50 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [143839745 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [143887361 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+51 [] in MetacelloMCVersion >> fetchRequiredFromArray: @22 line 12   [methId 134876929]
+    self [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [143889921 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [144054273 sz:7 cls: 134913 VariableContext] aVariableContext
+52 MetacelloGemStonePlatform (MetacelloPlatform) >> do:displaying: @2 line 3   [methId 130043649]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [143889921 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aString [143895041 sz:37 cls: 74753 String] Fetching baseline of BaselineOfGLASS1
+(skipped 1 evaluationTemps)
+53 MetacelloMCVersion >> fetchRequiredFromArray: @18 line 7   [methId 131618305]
+    receiver [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [144056577 sz:5 cls: 102401 Set] aSet
+    originalLoader [143869441 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    displayString [143895041 sz:37 cls: 74753 String] Fetching baseline of BaselineOfGLASS1
+    newLoader [143869441 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 3 evaluationTemps)
+    _VC [144054273 sz:7 cls: 134913 VariableContext] aVariableContext
+54 [] in MetacelloMCProjectSpec >> loadVersion:  @71 line 41   [methId 134863105]
+    self [143901953 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    receiver [143902465 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    projectCache [143904769 sz:26 cls: 101377 Dictionary] aDictionary
+    cachedList [20 sz:0 cls: 76289 UndefinedObject] nil
+    mcLoader [143905793 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    list [144056577 sz:5 cls: 102401 Set] aSet
+    vrsn [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    self [143901953 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+(skipped 2 evaluationTemps)
+    _VC [143901697 sz:4 cls: 134913 VariableContext] aVariableContext
+55 [] in MetacelloPlatform >> useStackCacheDuring:defaultDictionary: @14 line 9   [methId 134501121]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [143910145 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    aBlock [143902465 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [143909633 sz:5 cls: 134913 VariableContext] aVariableContext
+56 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [143910145 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [143915777 sz:2 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [143916545 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+57 MetacelloGemStonePlatform (MetacelloPlatform) >> useStackCacheDuring:defaultDictionary: @10 line 10   [methId 130596609]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [143902465 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    defaultDictionary [143921409 sz:26 cls: 101377 Dictionary] aDictionary
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+(skipped 6 evaluationTemps)
+    _VC [143909633 sz:5 cls: 134913 VariableContext] aVariableContext
+58 MetacelloMCBaselineOfProjectSpec (MetacelloMCProjectSpec) >> loadVersion: @22 line 25   [methId 132615425]
+    receiver [143901953 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    aVersionOrNil [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    vrsn [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    mcLoader [143905793 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    list [144056577 sz:5 cls: 102401 Set] aSet
+(skipped 6 evaluationTemps)
+    _VC [143924225 sz:7 cls: 134913 VariableContext] aVariableContext
+59 MetacelloProjectSpecForLoad >> performLoad    @29 line 21   [methId 129965569]
+    receiver [144152577 sz:3 cls: 36770817 MetacelloProjectSpecForLoad] aMetacelloProjectSpecForLoad
+    displayString [143994625 sz:24 cls: 74753 String] Project: GLASS1 baseline
+    spec [143901953 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    vrsn [144057857 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    override [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 2 evaluationTemps)
+60 MetacelloMCBaselineOfProjectSpec (MetacelloGenericProjectSpec) >> load @6 line 4   [methId 129751041]
+    receiver [143901953 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+(skipped 1 evaluationTemps)
+61 MetacelloProjectReferenceSpec >> loadUsing:gofer: @6 line 6   [methId 130728705]
+    receiver [144269313 sz:8 cls: 36669441 MetacelloProjectReferenceSpec] aMetacelloProjectReferenceSpec
+    aLoader [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    ignored [143997953 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+    required [143901953 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+(skipped 1 evaluationTemps)
+62 [] in MetacelloCommonMCSpecLoader >> linearLoadPackageSpecs:repositories: @14 line 6   [methId 134796545]
+    self [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [143985665 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    pkg [144269313 sz:8 cls: 36669441 MetacelloProjectReferenceSpec] aMetacelloProjectReferenceSpec
+    gofer [143997953 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+    self [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 4 evaluationTemps)
+    _VC [144047105 sz:5 cls: 134913 VariableContext] aVariableContext
+63 OrderedCollection (Collection) >> do:         @6 line 10   [methId 2448385]
+    receiver [142947841 sz:30 cls: 92673 OrderedCollection] anOrderedCollection
+    aBlock [143985665 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
+(skipped 4 evaluationTemps)
+64 MetacelloFetchingMCSpecLoader (MetacelloCommonMCSpecLoader) >> linearLoadPackageSpecs:repositories: @6 line 6   [methId 132528641]
+    receiver [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpecs [142947841 sz:30 cls: 92673 OrderedCollection] anOrderedCollection
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+    gofer [143997953 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+(skipped 3 evaluationTemps)
+    _VC [144047105 sz:5 cls: 134913 VariableContext] aVariableContext
+65 [] in MetacelloFetchingMCSpecLoader >> linearLoadPackageSpecs:repositories: @8 line 4   [methId 134902273]
+    self [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [142938881 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+    packageSpecs [142947841 sz:30 cls: 92673 OrderedCollection] anOrderedCollection
+    self [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 4 evaluationTemps)
+    _VC [142939393 sz:6 cls: 134913 VariableContext] aVariableContext
+66 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [142938881 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [142924545 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+67 MetacelloLoaderPolicy >> pushLoadDirective:during: @7 line 7   [methId 131762945]
+    receiver [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    aLoaderDirective [143742721 sz:3 cls: 36571905 MetacelloLinearLoadDirective] aMetacelloLinearLoadDirective
+    aBlock [142938881 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    oldRoot [141252353 sz:6 cls: 36569601 MetacelloAtomicLoadDirective] aMetacelloAtomicLoadDirective
+(skipped 3 evaluationTemps)
+    _VC [142919681 sz:5 cls: 134913 VariableContext] aVariableContext
+68 MetacelloLoaderPolicy >> pushLinearLoadDirectivesDuring:for: @3 line 3   [methId 131763457]
+    receiver [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    aBlock [142938881 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aLoader [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 3 evaluationTemps)
+69 MetacelloFetchingMCSpecLoader >> linearLoadPackageSpecs:repositories: @4 line 4   [methId 131641857]
+    receiver [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpecs [142947841 sz:30 cls: 92673 OrderedCollection] anOrderedCollection
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+(skipped 4 evaluationTemps)
+    _VC [142939393 sz:6 cls: 134913 VariableContext] aVariableContext
+70 MetacelloFetchingMCSpecLoader (MetacelloCommonMCSpecLoader) >> load @16 line 7   [methId 132528385]
+    receiver [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    repos [143777281 sz:6 cls: 66817 Array] anArray
+(skipped 3 evaluationTemps)
+71 MetacelloMCVersionSpecLoader >> load          @14 line 21   [methId 131660289]
+    receiver [141012225 sz:5 cls: 36576001 MetacelloMCVersionSpecLoader] aMetacelloMCVersionSpecLoader
+    mcLoader [144018689 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 2 evaluationTemps)
+    _VC [141012481 sz:5 cls: 134913 VariableContext] aVariableContext
+72 MetacelloMCVersion >> executeLoadFromArray:   @10 line 7   [methId 131624449]
+    receiver [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [141007105 sz:5 cls: 102401 Set] aSet
+    loader [141012225 sz:5 cls: 36576001 MetacelloMCVersionSpecLoader] aMetacelloMCVersionSpecLoader
+(skipped 1 evaluationTemps)
+73 [] in MetacelloMCVersion >> fetchRequiredFromArray: @34 line 11   [methId 136289281]
+    self [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [141004033 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    anArray [141007105 sz:5 cls: 102401 Set] aSet
+    self [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 3 evaluationTemps)
+    _VC [141004545 sz:7 cls: 134913 VariableContext] aVariableContext
+74 [] in MetacelloPlatform >> useStackCacheDuring:defaultDictionary: @14 line 9   [methId 134501121]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [140997377 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    aBlock [141004033 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [140997889 sz:5 cls: 134913 VariableContext] aVariableContext
+75 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [140997377 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [140991489 sz:2 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [140990465 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+76 MetacelloGemStonePlatform (MetacelloPlatform) >> useStackCacheDuring:defaultDictionary: @10 line 10   [methId 130596609]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [141004033 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    defaultDictionary [140983553 sz:26 cls: 101377 Dictionary] aDictionary
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+(skipped 6 evaluationTemps)
+    _VC [140997889 sz:5 cls: 134913 VariableContext] aVariableContext
+77 [] in MetacelloMCVersion >> fetchRequiredFromArray: @30 line 11   [methId 136721665]
+    self [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [140978689 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    newLoader [140975617 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    self [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 4 evaluationTemps)
+    _VC [141004545 sz:7 cls: 134913 VariableContext] aVariableContext
+78 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [140978689 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [140967169 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+79 [] in MetacelloMCVersion >> fetchRequiredFromArray: @22 line 12   [methId 134876929]
+    self [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [140963841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [141004545 sz:7 cls: 134913 VariableContext] aVariableContext
+80 MetacelloGemStonePlatform (MetacelloPlatform) >> do:displaying: @2 line 3   [methId 130043649]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [140963841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aString [140956417 sz:39 cls: 74753 String] Fetching baseline of BaselineOfSeaside3
+(skipped 1 evaluationTemps)
+81 MetacelloMCVersion >> fetchRequiredFromArray: @18 line 7   [methId 131618305]
+    receiver [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [141007105 sz:5 cls: 102401 Set] aSet
+    originalLoader [140975617 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    displayString [140956417 sz:39 cls: 74753 String] Fetching baseline of BaselineOfSeaside3
+    newLoader [140975617 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 3 evaluationTemps)
+    _VC [141004545 sz:7 cls: 134913 VariableContext] aVariableContext
+82 [] in MetacelloMCProjectSpec >> loadVersion:  @71 line 41   [methId 134863105]
+    self [140934657 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    receiver [140934145 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    projectCache [140931329 sz:26 cls: 101377 Dictionary] aDictionary
+    cachedList [20 sz:0 cls: 76289 UndefinedObject] nil
+    mcLoader [140930049 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    list [141007105 sz:5 cls: 102401 Set] aSet
+    vrsn [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    self [140934657 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+(skipped 2 evaluationTemps)
+    _VC [140934913 sz:4 cls: 134913 VariableContext] aVariableContext
+83 [] in MetacelloPlatform >> useStackCacheDuring:defaultDictionary: @14 line 9   [methId 134501121]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [140925441 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    aBlock [140934145 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [140925953 sz:5 cls: 134913 VariableContext] aVariableContext
+84 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [140925441 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [140916737 sz:2 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [140915969 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+85 MetacelloGemStonePlatform (MetacelloPlatform) >> useStackCacheDuring:defaultDictionary: @10 line 10   [methId 130596609]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [140934145 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    defaultDictionary [140911105 sz:26 cls: 101377 Dictionary] aDictionary
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+(skipped 6 evaluationTemps)
+    _VC [140925953 sz:5 cls: 134913 VariableContext] aVariableContext
+86 MetacelloMCBaselineOfProjectSpec (MetacelloMCProjectSpec) >> loadVersion: @22 line 25   [methId 132615425]
+    receiver [140934657 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    aVersionOrNil [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    vrsn [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    mcLoader [140930049 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    list [141007105 sz:5 cls: 102401 Set] aSet
+(skipped 6 evaluationTemps)
+    _VC [140908289 sz:7 cls: 134913 VariableContext] aVariableContext
+87 MetacelloProjectSpecForLoad >> performLoad    @29 line 21   [methId 129965569]
+    receiver [140902145 sz:3 cls: 36770817 MetacelloProjectSpecForLoad] aMetacelloProjectSpecForLoad
+    displayString [140899073 sz:26 cls: 74753 String] Project: Seaside3 baseline
+    spec [140934657 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    vrsn [141008385 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    override [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 2 evaluationTemps)
+88 MetacelloMCBaselineOfProjectSpec (MetacelloGenericProjectSpec) >> load @6 line 4   [methId 129751041]
+    receiver [140934657 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+(skipped 1 evaluationTemps)
+89 MetacelloProjectReferenceSpec >> loadUsing:gofer: @6 line 6   [methId 130728705]
+    receiver [143752705 sz:8 cls: 36669441 MetacelloProjectReferenceSpec] aMetacelloProjectReferenceSpec
+    aLoader [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    ignored [140341761 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+    required [140934657 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+(skipped 1 evaluationTemps)
+90 [] in MetacelloCommonMCSpecLoader >> linearLoadPackageSpecs:repositories: @14 line 6   [methId 134796545]
+    self [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [140334849 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    pkg [143752705 sz:8 cls: 36669441 MetacelloProjectReferenceSpec] aMetacelloProjectReferenceSpec
+    gofer [140341761 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+    self [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 4 evaluationTemps)
+    _VC [140336897 sz:5 cls: 134913 VariableContext] aVariableContext
+91 OrderedCollection (Collection) >> do:         @6 line 10   [methId 2448385]
+    receiver [131584257 sz:17 cls: 92673 OrderedCollection] anOrderedCollection
+    aBlock [140334849 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [26 sz:0 cls: 74241 SmallInteger] 3 == 0x3
+(skipped 4 evaluationTemps)
+92 MetacelloFetchingMCSpecLoader (MetacelloCommonMCSpecLoader) >> linearLoadPackageSpecs:repositories: @6 line 6   [methId 132528641]
+    receiver [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpecs [131584257 sz:17 cls: 92673 OrderedCollection] anOrderedCollection
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+    gofer [140341761 sz:5 cls: 36556801 MetacelloGofer] aMetacelloGofer
+(skipped 3 evaluationTemps)
+    _VC [140336897 sz:5 cls: 134913 VariableContext] aVariableContext
+93 [] in MetacelloFetchingMCSpecLoader >> atomicLoadPackageSpecs:repositories: @8 line 4   [methId 134902785]
+    self [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [144410113 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+    packageSpecs [131584257 sz:17 cls: 92673 OrderedCollection] anOrderedCollection
+    self [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 4 evaluationTemps)
+    _VC [144410625 sz:6 cls: 134913 VariableContext] aVariableContext
+94 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    receiver [144410113 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144403201 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+95 MetacelloLoaderPolicy >> pushLoadDirective:during: @7 line 7   [methId 131762945]
+    receiver [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    aLoaderDirective [141252353 sz:6 cls: 36569601 MetacelloAtomicLoadDirective] aMetacelloAtomicLoadDirective
+    aBlock [144410113 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    oldRoot [144398081 sz:3 cls: 36571905 MetacelloLinearLoadDirective] aMetacelloLinearLoadDirective
+(skipped 3 evaluationTemps)
+    _VC [144400897 sz:5 cls: 134913 VariableContext] aVariableContext
+96 MetacelloLoaderPolicy >> pushAtomicLoadDirectivesDuring:for: @3 line 3   [methId 131764225]
+    receiver [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    aBlock [144410113 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aLoader [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 3 evaluationTemps)
+97 MetacelloFetchingMCSpecLoader >> atomicLoadPackageSpecs:repositories: @4 line 4   [methId 131642113]
+    receiver [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    packageSpecs [131584257 sz:17 cls: 92673 OrderedCollection] anOrderedCollection
+    repositories [143777281 sz:6 cls: 66817 Array] anArray
+(skipped 4 evaluationTemps)
+    _VC [144410625 sz:6 cls: 134913 VariableContext] aVariableContext
+98 MetacelloFetchingMCSpecLoader (MetacelloCommonMCSpecLoader) >> load @12 line 5   [methId 132528385]
+    receiver [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    repos [143777281 sz:6 cls: 66817 Array] anArray
+(skipped 3 evaluationTemps)
+99 MetacelloMCVersionSpecLoader >> load          @14 line 21   [methId 131660289]
+    receiver [144384513 sz:5 cls: 36576001 MetacelloMCVersionSpecLoader] aMetacelloMCVersionSpecLoader
+    mcLoader [140343297 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 2 evaluationTemps)
+    _VC [144384769 sz:5 cls: 134913 VariableContext] aVariableContext
+100 MetacelloMCVersion >> executeLoadFromArray:   @10 line 7   [methId 131624449]
+    receiver [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [144354305 sz:5 cls: 102401 Set] aSet
+    loader [144384513 sz:5 cls: 36576001 MetacelloMCVersionSpecLoader] aMetacelloMCVersionSpecLoader
+(skipped 1 evaluationTemps)
+101 [] in MetacelloMCVersion >> fetchRequiredFromArray: @34 line 11   [methId 136289281]
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144336385 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    anArray [144354305 sz:5 cls: 102401 Set] aSet
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 3 evaluationTemps)
+    _VC [144336897 sz:7 cls: 134913 VariableContext] aVariableContext
+102 [] in MetacelloPlatform >> useStackCacheDuring:defaultDictionary: @14 line 9   [methId 134501121]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144330753 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    aBlock [144336385 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [144331265 sz:5 cls: 134913 VariableContext] aVariableContext
+103 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144330753 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [144323329 sz:2 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [144321793 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+104 MetacelloGemStonePlatform (MetacelloPlatform) >> useStackCacheDuring:defaultDictionary: @10 line 10   [methId 130596609]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [144336385 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    defaultDictionary [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+    dict [144051713 sz:56 cls: 101377 Dictionary] aDictionary
+(skipped 6 evaluationTemps)
+    _VC [144331265 sz:5 cls: 134913 VariableContext] aVariableContext
+105 [] in MetacelloMCVersion >> fetchRequiredFromArray: @30 line 11   [methId 136721665]
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144310017 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    newLoader [144305665 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 4 evaluationTemps)
+    _VC [144336897 sz:7 cls: 134913 VariableContext] aVariableContext
+106 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144310017 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144298241 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+107 [] in MetacelloMCVersion >> fetchRequiredFromArray: @22 line 12   [methId 134876929]
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144292865 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [144336897 sz:7 cls: 134913 VariableContext] aVariableContext
+108 MetacelloGemStonePlatform (MetacelloPlatform) >> do:displaying: @2 line 3   [methId 130043649]
+    receiver [132432641 sz:3 cls: 36411905 MetacelloGemStonePlatform] aMetacelloGemStonePlatform
+    aBlock [144292865 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aString [144285697 sz:43 cls: 74753 String] Fetching baseline of BaselineOfWonkaRuntime
+(skipped 1 evaluationTemps)
+109 MetacelloMCVersion >> fetchRequiredFromArray: @18 line 7   [methId 131618305]
+    receiver [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [144354305 sz:5 cls: 102401 Set] aSet
+    originalLoader [144275201 sz:4 cls: 36554497 MetacelloLoadingMCSpecLoader] aMetacelloLoadingMCSpecLoader
+    displayString [144285697 sz:43 cls: 74753 String] Fetching baseline of BaselineOfWonkaRuntime
+    newLoader [144305665 sz:4 cls: 36549889 MetacelloFetchingMCSpecLoader] aMetacelloFetchingMCSpecLoader
+(skipped 3 evaluationTemps)
+    _VC [144336897 sz:7 cls: 134913 VariableContext] aVariableContext
+110 [] in MetacelloMCVersion >> doLoadRequiredFromArray: @28 line 10   [methId 134883585]
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144264449 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    fetchLoader [20 sz:0 cls: 76289 UndefinedObject] nil
+    displayString [144258561 sz:34 cls: 74753 String] baseline of BaselineOfWonkaRuntime
+    fetchLoader [20 sz:0 cls: 76289 UndefinedObject] nil
+    anArray [144257281 sz:1 cls: 66817 Array] anArray
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 3 evaluationTemps)
+    _VC [144266497 sz:4 cls: 134913 VariableContext] aVariableContext
+111 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    receiver [144264449 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144248577 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+112 MetacelloMCVersion >> doLoadRequiredFromArray: @23 line 16   [methId 131622145]
+    receiver [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    anArray [144257281 sz:1 cls: 66817 Array] anArray
+    displayString [144258561 sz:34 cls: 74753 String] baseline of BaselineOfWonkaRuntime
+    oldPolicy [143449345 sz:9 cls: 36573953 MetacelloLoaderPolicy] aMetacelloLoaderPolicy
+    oldBypassProgress [12 sz:0 cls: 68097 Boolean] false
+(skipped 5 evaluationTemps)
+    _VC [144246273 sz:8 cls: 134913 VariableContext] aVariableContext
+113 Unicode7 (String) >> loadRequiredForMetacelloMCVersion: @3 line 3   [methId 132454657]
+    receiver [144235777 sz:2 cls: 154369 Unicode7] CI
+    aMetacelloMCVersion [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+(skipped 2 evaluationTemps)
+114 MetacelloMCVersion >> load:                   @2 line 3   [methId 131623681]
+    receiver [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    required [144235777 sz:2 cls: 154369 Unicode7] CI
+(skipped 2 evaluationTemps)
+115 [] in MetacelloScriptEngine >> load:onProjectDownGrade:onProjectUpgrade: @19 line 16   [methId 135732225]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144224513 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    version [144380929 sz:5 cls: 36489473 MetacelloMCVersion] aMetacelloMCVersion
+    loadedSpec [144219393 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    required [144235777 sz:2 cls: 154369 Unicode7] CI
+    loadedSpec [144219393 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+(skipped 3 evaluationTemps)
+    _VC [144225537 sz:4 cls: 134913 VariableContext] aVariableContext
+116 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144224513 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [144212481 sz:5 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [144210945 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+117 [] in MetacelloScriptEngine >> handleNotificationsForAction: @21 line 6   [methId 136302337]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144205569 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    actionBlock [144224513 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 4 evaluationTemps)
+    _VC [144207105 sz:5 cls: 134913 VariableContext] aVariableContext
+118 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144205569 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [144197889 sz:3 cls: 130049 ExceptionSet] anExceptionSet
+    handlerBlock [144197121 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+119 [] in MetacelloScriptEngine >> handleNotificationsForAction: @13 line 14   [methId 135733761]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144194561 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 4 evaluationTemps)
+    _VC [144207105 sz:5 cls: 134913 VariableContext] aVariableContext
+120 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144194561 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [128843521 sz:19 cls: 128843265 MetacelloAllowLockedProjectChange class] MetacelloAllowLockedProjectChange
+    handlerBlock [144181249 sz:5 cls: 143361 ExecBlock] anExecBlock
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+121 [] in MetacelloScriptEngine >> handleNotificationsForAction: @7 line 20   [methId 133667073]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144178689 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 4 evaluationTemps)
+    _VC [144207105 sz:5 cls: 134913 VariableContext] aVariableContext
+122 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144178689 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [152321 sz:19 cls: 581121 Warning class] Warning
+    handlerBlock [144172801 sz:5 cls: 143361 ExecBlock] anExecBlock
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+123 MetacelloScriptEngine >> handleNotificationsForAction: @3 line 24   [methId 131568641]
+    receiver [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    actionBlock [144224513 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 4 evaluationTemps)
+    _VC [144207105 sz:5 cls: 134913 VariableContext] aVariableContext
+124 [] in MetacelloScriptEngine >> load:onProjectDownGrade:onProjectUpgrade: @7 line 5   [methId 134683649]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144166401 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+(skipped 3 evaluationTemps)
+    _VC [144166913 sz:7 cls: 134913 VariableContext] aVariableContext
+125 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    receiver [144166401 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144156673 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+126 MetacelloProjectRegistration class >> copyRegistryRestoreOnErrorWhile: @9 line 14   [methId 130990337]
+    receiver [129513217 sz:19 cls: 129512961 MetacelloProjectRegistration class] MetacelloProjectRegistration
+    aBlock [144166401 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    oldRegistry [143508481 sz:2 cls: 36780545 MetacelloProjectRegistry] aMetacelloProjectRegistry
+    newRegistry [144150785 sz:2 cls: 36780545 MetacelloProjectRegistry] aMetacelloProjectRegistry
+(skipped 3 evaluationTemps)
+    _VC [144154113 sz:6 cls: 134913 VariableContext] aVariableContext
+127 MetacelloScriptEngine >> load:onProjectDownGrade:onProjectUpgrade: @3 line 3   [methId 131573761]
+    receiver [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    required [144235777 sz:2 cls: 154369 Unicode7] CI
+    onDownGradeBlock [133143809 sz:5 cls: 143361 ExecBlock] anExecBlock
+    onUpgradeBlock [133143553 sz:5 cls: 143361 ExecBlock] anExecBlock
+(skipped 3 evaluationTemps)
+    _VC [144166913 sz:7 cls: 134913 VariableContext] aVariableContext
+128 MetacelloScriptEngine >> load:                @2 line 3   [methId 131570689]
+    receiver [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    required [144235777 sz:2 cls: 154369 Unicode7] CI
+(skipped 4 evaluationTemps)
+129 MetacelloScriptEngine (Object) >> perform:withArguments: @1 line 1   [methId 4068865]
+    receiver [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    aSelectorSymbol [29478145 sz:5 cls: 110849 Symbol] load:
+    anArray [144131585 sz:1 cls: 66817 Array] anArray
+130 [] in MetacelloScriptExecutor >> execute:     @39 line 15   [methId 134229505]
+    self [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+    receiver [144129025 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    projectSpec [144126977 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    engine [144225281 sz:3 cls: 36803329 MetacelloScriptEngine] aMetacelloScriptEngine
+    root [20 sz:0 cls: 76289 UndefinedObject] nil
+    self [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+(skipped 3 evaluationTemps)
+    _VC [144129793 sz:4 cls: 134913 VariableContext] aVariableContext
+131 [] in MetacelloScriptApiExecutor >> executeString:do: @14 line 6   [methId 134205185]
+    self [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+    receiver [144122881 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    projectSpec [144120833 sz:13 cls: 36589057 MetacelloMCBaselineOfProjectSpec] aMetacelloMCBaselineOfProjectSpec
+    self [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+    projectSpecBlock [144129025 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [144123393 sz:5 cls: 134913 VariableContext] aVariableContext
+132 Array (Collection) >> do:                     @6 line 10   [methId 2448385]
+    receiver [144117505 sz:1 cls: 66817 Array] anArray
+    aBlock [144122881 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
+(skipped 4 evaluationTemps)
+133 MetacelloScriptApiExecutor >> executeString:do: @7 line 4   [methId 132035329]
+    receiver [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+    aString [144112129 sz:12 cls: 154369 Unicode7] WonkaRuntime
+    projectSpecBlock [144129025 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [144123393 sz:5 cls: 134913 VariableContext] aVariableContext
+134 Unicode7 (String) >> execute:against:         @2 line 2   [methId 47441665]
+    receiver [144112129 sz:12 cls: 154369 Unicode7] WonkaRuntime
+    projectSpecBlock [144129025 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    aScriptExecutor [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+(skipped 3 evaluationTemps)
+135 MetacelloScriptApiExecutor (MetacelloScriptExecutor) >> execute: @7 line 9   [methId 132066305]
+    receiver [144129537 sz:11 cls: 36804865 MetacelloScriptApiExecutor] aMetacelloScriptApiExecutor
+    statements [144104449 sz:9 cls: 92673 OrderedCollection] anOrderedCollection
+(skipped 4 evaluationTemps)
+    _VC [144129793 sz:4 cls: 134913 VariableContext] aVariableContext
+136 Metacello >> execute:args:                    @9 line 5   [methId 128880897]
+    receiver [144102145 sz:2 cls: 36656385 Metacello] aMetacello
+    selector [29478145 sz:5 cls: 110849 Symbol] load:
+    args [144100353 sz:1 cls: 66817 Array] anArray
+    script [144104449 sz:9 cls: 92673 OrderedCollection] anOrderedCollection
+(skipped 2 evaluationTemps)
+137 Metacello >> load:                            @2 line 2   [methId 128877569]
+    receiver [144102145 sz:2 cls: 36656385 Metacello] aMetacello
+    required [144235777 sz:2 cls: 154369 Unicode7] CI
+(skipped 3 evaluationTemps)
+138 [] in Executed Code                           @216 line 109   [methId 144095745]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144094209 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    metacello [144092161 sz:2 cls: 36656385 Metacello] aMetacello
+(skipped 4 evaluationTemps)
+    _VC [144094977 sz:5 cls: 134913 VariableContext] aVariableContext
+139 [] in GsDeployer >> deploy:                   @22 line 8   [methId 49577985]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144089345 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    deploymentDict [20 sz:0 cls: 76289 UndefinedObject] nil
+    deployNoArgBlock [144094209 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    self [144043777 sz:3 cls: 36812801 GsDeployer] aGsDeployer
+(skipped 2 evaluationTemps)
+    _VC [144089857 sz:4 cls: 134913 VariableContext] aVariableContext
+140 ExecBlock0 (ExecBlock) >> on:do:              @3 line 44   [methId 4355073]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144089345 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    exceptionSelector [152321 sz:19 cls: 581121 Warning class] Warning
+    handlerBlock [48418561 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    fastPath [268 sz:0 cls: 68097 Boolean] true
+(skipped 1 evaluationTemps)
+141 [] in GsDeployer >> deploy:                   @8 line 9   [methId 45782273]
+    self [144043777 sz:3 cls: 36812801 GsDeployer] aGsDeployer
+    receiver [144035841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    deploymentDict [20 sz:0 cls: 76289 UndefinedObject] nil
+    self [144043777 sz:3 cls: 36812801 GsDeployer] aGsDeployer
+    deploymentDict [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 4 evaluationTemps)
+    _VC [144089857 sz:4 cls: 134913 VariableContext] aVariableContext
+142 [] in MCPlatformSupport class >> commitOnAlmostOutOfMemoryDuring: @12 line 7   [methId 48044801]
+    self [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    receiver [144020993 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144035841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    self [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+(skipped 2 evaluationTemps)
+    _VC [144030721 sz:5 cls: 134913 VariableContext] aVariableContext
+143 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    receiver [144020993 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144013569 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+144 MCPlatformSupport class >> commitOnAlmostOutOfMemoryDuring: @7 line 8   [methId 43175681]
+    receiver [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    aBlock [144035841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [144030721 sz:5 cls: 134913 VariableContext] aVariableContext
+145 [] in GsDeployer >> mcPlatformSupportDo:      @15 line 10   [methId 45783553]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144004097 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [144035841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [144004609 sz:6 cls: 134913 VariableContext] aVariableContext
+146 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [144004097 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [143996929 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+147 GsDeployer >> mcPlatformSupportDo:            @11 line 10   [methId 39369217]
+    receiver [144043777 sz:3 cls: 36812801 GsDeployer] aGsDeployer
+    aBlock [144035841 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    oldAutoCommit [12 sz:0 cls: 68097 Boolean] false
+    oldAutoMigrate [12 sz:0 cls: 68097 Boolean] false
+(skipped 3 evaluationTemps)
+    _VC [144004609 sz:6 cls: 134913 VariableContext] aVariableContext
+148 GsDeployer >> deploy:                         @3 line 3   [methId 39368449]
+    receiver [144043777 sz:3 cls: 36812801 GsDeployer] aGsDeployer
+    deployNoArgBlock [144094209 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [143990017 sz:5 cls: 134913 VariableContext] aVariableContext
+149 GsDeployer class >> autoMigrate:              @3 line 12   [methId 42683393]
+    receiver [36812801 sz:19 cls: 36811265 GsDeployer class] GsDeployer
+    deployNoArgBlock [144094209 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 2 evaluationTemps)
+150 GsDeployer class >> deploy:                   @2 line 12   [methId 42682369]
+    receiver [36812801 sz:19 cls: 36811265 GsDeployer class] GsDeployer
+    deployNoArgBlock [144094209 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 2 evaluationTemps)
+151 Executed Code                                 @26 line 100   [methId 144094721]
+    receiver [20 sz:0 cls: 76289 UndefinedObject] nil
+    metacello [144092161 sz:2 cls: 36656385 Metacello] aMetacello
+    createOnVersionChangeBlock [143970817 sz:5 cls: 128257 ExecBlock2] anExecBlock2
+    projectNamesAndWantedVersions [143970049 sz:26 cls: 101377 Dictionary] aDictionary
+    computeProjectNamesAndWantedVersions [143969281 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 2 evaluationTemps)
+    _VC [144094977 sz:5 cls: 134913 VariableContext] aVariableContext
+152 GsNMethod class >> _gsReturnToC               @1 line 1   [methId 4523009]
+    receiver [144897 sz:19 cls: 744193 GsNMethod class] GsNMethod
+topaz 1> 
+topaz 1> 
+topaz 1> 
+Logging out session 1.
+--- 01/15/2018 15:38:40.659 UTC Logging out

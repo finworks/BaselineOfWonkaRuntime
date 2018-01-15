@@ -52,26 +52,23 @@ run
         
   createOnVersionChangeBlock := [ :default :description|
      [ :ex :existingRegistration :newRegistration | 
-       | wantedVersion className |
+       | wantedVersion className wants |
        className := (existingRegistration configurationProjectSpec ifNil: [ existingRegistration baselineProjectSpec ])
                className.
        wantedVersion := projectNamesAndWantedVersions at: className ifAbsent: [ nil ].
 
-       wantedVersion isNil
-         ifTrue: [ ^ default ]
-         ifFalse: [
-             " Fixme: this does not take into account the fact that a symbolic version may be an alias for another version number "
-             (existingRegistration version asString = wantedVersion)
-                ifTrue: [ 
-                        Transcript show:
-                                        description , ' ' , existingRegistration nameAndVersionString , ' -> ' , newRegistration nameAndVersionString; cr.
-                        ex allow ]
-                ifFalse: [ 
-                        Transcript show:
-                                        '! Blocking ' , description , ' ' , existingRegistration nameAndVersionString , ' -> '
-                                                , newRegistration nameAndVersionString; cr.
-                        ex disallow ]
-          ]
+       " Fixme: this does not take into account the fact that a symbolic version may be an alias for another version number "
+       wants := wantedVersion isNil ifTrue: [ default ] ifFalse: [ existingRegistration version asString = wantedVersion ].
+       wants
+          ifTrue: [ 
+                  Transcript show:
+                                  description , ' ' , existingRegistration nameAndVersionString , ' -> ' , newRegistration nameAndVersionString; cr.
+                  ex allow ]
+          ifFalse: [ 
+                  Transcript show:
+                                  '! Blocking ' , description , ' ' , existingRegistration nameAndVersionString , ' -> '
+                                          , newRegistration nameAndVersionString; cr.
+                  ex disallow ]
   ]] .
                       
 
@@ -136,7 +133,9 @@ run
                                  'filetree://', wonkaRoot, '/3rdparty/gemstone/glass/repository'.
                                  'filetree://', wonkaRoot, '/3rdparty/GemStone3.4'};
            load: 'CI'.
-      ]]
+      ]].
+    System commitTransaction
+   
 %
 
 

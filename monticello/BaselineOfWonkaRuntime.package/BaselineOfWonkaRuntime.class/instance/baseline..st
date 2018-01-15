@@ -41,7 +41,7 @@ baseline: spec
     "		  versionString: #'release3.2';"
 
 		      operator: #=;
-		      loads: #('Core' 'Scriptaculous' 'Swazoo' 'Zinc').
+		      loads: #('Core' 'Scriptaculous' 'Zinc').
 		];
                 project: 'SeasideDevelopment' copyFrom: 'Seaside3' with: [ spec loads: #('Seaside-Development') ];
 		configuration: 'Magritte3' with: [
