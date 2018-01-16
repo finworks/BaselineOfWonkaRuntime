@@ -6,7 +6,7 @@ ensureNewConfigurationsLoaded
 
 	<lint: #WonkaCodeCruftLeftInMethodsRule rationale: 'Necessarry logging during loading'>
 	| repository |
-	repository := MCDirectoryRepository new
+	repository := MCFileTreeRepository new
 		directory: WonkaSourceCode instance localPlatformSpecificThirdPartyPackagesDirectory.	" We need to load these in a stable order, otherwise deploys etc. on working directories where the files in the directory list in
 	a different order can behave differently (this has already happened).
 	
