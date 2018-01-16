@@ -1,0 +1,763 @@
+Starting from extent: /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/bin/extent0.seaside.dbf
+Using options from: topaz/setupOverNetwork.topaz
+Using load script:: topaz/makeCIImage.topaz
++ stopstone -i -t 1 gs64stone DataCurator swordfish
+--- 01/16/2018 09:59:38.959 UTC ---
+stopstone[Info]: GemStone version '3.4.0'
+stopstone[Info]: initiating 'gs64stone' shutdown...
+--- 01/16/2018 09:59:40.972 UTC Login
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libfloss-3.4.0-64.so
+[Info]: Gave this process preference for OOM killer: wrote to /proc/6728/oom_score_adj value 250
+--- 01/16/2018 09:59:41.250 UTC ---
+stopstone[Info]: Waiting up to 1 seconds for all other processes to detach the shared page cache.
+--- 01/16/2018 09:59:42.252 UTC ---
+stopstone[Warning]: The timeout interval (1 seconds) has expired.
+stopstone[Warning]: 4 processes are still attached to the shared page cache.
++ true
+++ pidof stoned
++ kill -9
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
++ true
++ cp /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/bin/extent0.seaside.dbf /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/extent0.dbf
++ chmod u+rw /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/extent0.dbf
++ startstone gs64stone -N
+startstone[Info]: GemStone version '3.4.0'
+startstone[Info]: Starting Stone repository monitor gs64stone.
+startstone[Info]: GEMSTONE is: '/opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux'.
+startstone[Info]:
+    GEMSTONE_SYS_CONF=/opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf
+    GEMSTONE_EXE_CONF=/vagrant/gs64stone.conf
+stoned[Info]: Log file is '/opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/gs64stone.log'.
+startstone[Info]: GemStone server gs64stone has been started, process 6736
++ true
++ rm -rf /vagrant/3rdparty/GemStone3.4/Announcements.v3.package /vagrant/3rdparty/GemStone3.4/Base-Bootstrap.v3.package /vagrant/3rdparty/GemStone3.4/BaselineOfGLASS1.package /vagrant/3rdparty/GemStone3.4/BaselineOfGrease.package /vagrant/3rdparty/GemStone3.4/BaselineOfMetacello.package /vagrant/3rdparty/GemStone3.4/Bootstrap.v34.package /vagrant/3rdparty/GemStone3.4/Change-Notification.v310.package /vagrant/3rdparty/GemStone3.4/Core322x.package /vagrant/3rdparty/GemStone3.4/Core.v3.package /vagrant/3rdparty/GemStone3.4/GemStone-ANSI-Streams.package /vagrant/3rdparty/GemStone3.4/GemStone-Deployment.v310.package /vagrant/3rdparty/GemStone3.4/GemStone-Indexing-Extensions.v34.package /vagrant/3rdparty/GemStone3.4/GemStone-Interactions.package /vagrant/3rdparty/GemStone3.4/Grease-Core.package /vagrant/3rdparty/GemStone3.4/Grease-GemStone300-Core.package /vagrant/3rdparty/GemStone3.4/Grease-GemStone-Core.package /vagrant/3rdparty/GemStone3.4/GsSqueakCommon-Core.package /vagrant/3rdparty/GemStone3.4/GsSqueakCommon-CoreV30.package /vagrant/3rdparty/GemStone3.4/GsSqueakCommon-TestsV30.package /vagrant/3rdparty/GemStone3.4/GsUpgrader-Core.package /vagrant/3rdparty/GemStone3.4/Metacello-Base.package /vagrant/3rdparty/GemStone3.4/Metacello-Bitbucket.package /vagrant/3rdparty/GemStone3.4/Metacello-Core.package /vagrant/3rdparty/GemStone3.4/Metacello-Cypress.package /vagrant/3rdparty/GemStone3.4/Metacello-GitBasedRepository.package /vagrant/3rdparty/GemStone3.4/Metacello-GitHub.package /vagrant/3rdparty/GemStone3.4/Metacello-MC.package /vagrant/3rdparty/GemStone3.4/Metacello-Platform.gemstone.package /vagrant/3rdparty/GemStone3.4/Metacello-ToolBox.package /vagrant/3rdparty/GemStone3.4/Monticello.v34.package /vagrant/3rdparty/GemStone3.4/OB-GemStone-Platform.package /vagrant/3rdparty/GemStone3.4/OB-Monticello.package /vagrant/3rdparty/GemStone3.4/OB-Standard.v3.package /vagrant/3rdparty/GemStone3.4/OB-Tools.v33.package /vagrant/3rdparty/GemStone3.4/PackageInfo-Base.g.package /vagrant/3rdparty/GemStone3.4/SMTPMail.package /vagrant/3rdparty/GemStone3.4/Sport3.010.v3.package /vagrant/3rdparty/GemStone3.4/Squeak.v34.package /vagrant/3rdparty/GemStone3.4/Utf8Encoding.310.package
++ topaz -l
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libgcilnk-3.4.0-64.so
+ _____________________________________________________________________________
+|                             Configuration Files                             |
+|                                                                             |
+| System File: /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf |
+|                                                                             |
+| Executable File: /vagrant/gem.conf                                          |
+| Warning:  File not found (errno=2,ENOENT, The file or directory specified cannot
+| be found)                                                                   |
+|           using defaults.                                                   |
+|_____________________________________________________________________________|
+Reading config file /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf
+ _____________________________________________________________________________
+|                Gem Configuration Options for process id 6788                |
+|_____________________________________________________________________________|
+
+DUMP_OPTIONS = TRUE;
+GEM_ABORT_MAX_CRS = 0;
+GEM_CACHE_WARMER_ARGS = "";
+GEM_CACHE_WARMER_MID_CACHE_ARGS = "";
+GEM_COMPRESS_TRANLOG_RECORDS = TRUE;
+GEM_FREE_FRAME_CACHE_SIZE = -1;
+GEM_FREE_FRAME_LIMIT = -1;
+GEM_FREE_PAGEIDS_CACHE = 200;
+GEM_HALT_ON_ERROR = -1;
+GEM_KEEP_MIN_SOFTREFS = 0;
+GEM_KERBEROS_KEYTAB_FILE = "";
+GEM_KEYRING_DIRS = "";
+GEM_MAX_SMALLTALK_STACK_DEPTH = 1000;
+GEM_NATIVE_CODE_ENABLED = 2;
+GEM_PRIVATE_PAGE_CACHE_KB = 960KB;
+GEM_PGSVR_COMPRESS_PAGE_TRANSFERS = FALSE;
+GEM_PGSVR_FREE_FRAME_CACHE_SIZE = -1;
+GEM_PGSVR_FREE_FRAME_LIMIT = -1;
+GEM_PGSVR_UPDATE_CACHE_ON_READ = FALSE;
+GEM_PGSVR_USE_SSL = FALSE;
+GEM_READ_AUTH_ERR_STUBS = FALSE;
+GEM_REPOSITORY_IN_MEMORY = FALSE;
+GEM_RPC_KEEPALIVE_INTERVAL = 0;
+GEM_RPCGCI_TIMEOUT = 0;
+GEM_RPC_USE_SSL = TRUE;
+GEM_SOFTREF_CLEANUP_PERCENT_MEM = 50;
+GEM_STATMONITOR_ARGS = "";
+GEM_STATMONITOR_MID_CACHE_ARGS = "";
+GEM_TEMPOBJ_AGGRESSIVE_STUBBING = TRUE;
+GEM_TEMPOBJ_CACHE_SIZE = 50000KB;
+GEM_TEMPOBJ_CONSECUTIVE_MARKSWEEP_LIMIT = 50;
+GEM_TEMPOBJ_MESPACE_SIZE = 0;
+GEM_TEMPOBJ_OOMSTATS_CSV = FALSE;
+GEM_TEMPOBJ_OOPMAP_SIZE = 0;
+GEM_TEMPOBJ_SCOPES_SIZE = 2000;
+GEM_TEMPOBJ_POMGEN_SIZE = 0;
+GEM_TEMPOBJ_POMGEN_PRUNE_ON_VOTE = 50;
+GEM_TEMPOBJ_POMGEN_SCAVENGE_INTERVAL = 1800;
+GEM_TEMPOBJ_START_ADDR not used on this platform
+LOG_WARNINGS = TRUE;
+SHR_NUM_FREE_FRAME_SERVERS = -1;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_POLICY = 0;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_SIZE_MB = 0;
+SHR_PAGE_CACHE_LOCKED = FALSE;
+SHR_PAGE_CACHE_NUM_PROCS = 65529;
+SHR_PAGE_CACHE_NUM_SHARED_COUNTERS = 1900;
+SHR_PAGE_CACHE_PERMISSIONS = 660;
+SHR_PAGE_CACHE_SIZE_KB = 75000KB;
+SHR_TARGET_FREE_FRAME_COUNT = -1;
+SHR_WELL_KNOWN_PORT_NUMBER = 0;
+CONFIG_WARNINGS_FATAL = FALSE;
+(vmGc spaceSizes: eden init 2048K max 9344K , survivor init 448K max 1600K,
+ vmGc    old max 37440K, code max 10048K, perm max 5056K, pom 10 * 4224K = 42240K,
+ vmGc    remSet 1156K, meSpace max 51540K oopMapSize 262144  max footprint 164M)
+ _____________________________________________________________________________
+|             GemStone/S64 Object-Oriented Data Management System             |
+|                   Copyright (C) GemTalk Systems 1986-2017                   |
+|                            All rights reserved.                             |
+|                           Covered by U.S Patents:                           |
+|            6,256,637 Transactional virtual machine architecture             |
+|              6,360,219 Object queues with concurrent updating               |
+|                  6,567,905 Generational Garbage Collector.                  |
+| 6,681,226 Selective Pessimistic Locking for a Concurrently Updateable Database
++-----------------------------------------------------------------------------+
+|    PROGRAM: topaz, Linear GemStone Interface (Linked Session)               |
+|    VERSION: 3.4.0, Thu Oct 19 11:19:41 2017                                 |
+|      BUILD: gss64_3_4_x_branch-42785                                        |
+|  BUILT FOR: x86-64 (Linux)                                                  |
+|       MODE: 64 bit                                                          |
+| RUNNING ON: 4-CPU reahl-development-machine x86_64 (Linux 4.4.0-109-generic |
+| #132-Ubuntu SMP Tue Jan 9 19:52:39 UTC 2018) 7809MB                         |
+| PROCESS ID: 6788      DATE: 01/16/2018 09:59:46 UTC                         |
+|   USER IDS: REAL=vagrant (1000) EFFECTIVE=vagrant (1000) LOGIN=vagrant (1000)
+|_____________________________________________________________________________|
+Warning, executable configuration file not found
+    /vagrant/gem.conf
+
+neither .topazini nor $HOME/.topazini were found
+topaz> iferror exit
+topaz> 
+topaz> set user DataCurator password swordfish gemstone gs64stone
+topaz> 
+topaz> login
+[Info]: LNK client/gem GCI levels = 34001/34001
+--- 01/16/2018 09:59:45.532 UTC Login
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libfloss-3.4.0-64.so
+[Info]: User ID: DataCurator
+[Info]: Repository: gs64stone
+[Info]: Session ID: 5
+[Info]: GCI Client Host: <Linked>
+[Info]: Page server PID: -1
+[Info]: using libicu version 58.2
+[Info]: Gave this process preference for OOM killer: wrote to /proc/6788/oom_score_adj value 250
+[01/16/2018 09:59:45.557 UTC]
+  gci login: currSession 1  linked session 
+successful login
+ fileformat is now utf8
+sourcestringclass is now Unicode16 
+topaz 1> 
+topaz 1> run
+   UserGlobals at: #wonkaOverNetwork put: true.
+   UserGlobals at: #wonkaRoot put: '/vagrant'.
+   UserGlobals at: #wonkaPlatformName put: 'GemStone3.4'.
+   System commitTransaction
+%
+true
+topaz 1> 
+topaz 1> exit
+Logging out session 1.
+--- 01/16/2018 09:59:45.600 UTC Logging out
++ topaz -l
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libgcilnk-3.4.0-64.so
+ _____________________________________________________________________________
+|                             Configuration Files                             |
+|                                                                             |
+| System File: /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf |
+|                                                                             |
+| Executable File: /vagrant/gem.conf                                          |
+| Warning:  File not found (errno=2,ENOENT, The file or directory specified cannot
+| be found)                                                                   |
+|           using defaults.                                                   |
+|_____________________________________________________________________________|
+Reading config file /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/data/system.conf
+ _____________________________________________________________________________
+|                Gem Configuration Options for process id 6792                |
+|_____________________________________________________________________________|
+
+DUMP_OPTIONS = TRUE;
+GEM_ABORT_MAX_CRS = 0;
+GEM_CACHE_WARMER_ARGS = "";
+GEM_CACHE_WARMER_MID_CACHE_ARGS = "";
+GEM_COMPRESS_TRANLOG_RECORDS = TRUE;
+GEM_FREE_FRAME_CACHE_SIZE = -1;
+GEM_FREE_FRAME_LIMIT = -1;
+GEM_FREE_PAGEIDS_CACHE = 200;
+GEM_HALT_ON_ERROR = -1;
+GEM_KEEP_MIN_SOFTREFS = 0;
+GEM_KERBEROS_KEYTAB_FILE = "";
+GEM_KEYRING_DIRS = "";
+GEM_MAX_SMALLTALK_STACK_DEPTH = 1000;
+GEM_NATIVE_CODE_ENABLED = 2;
+GEM_PRIVATE_PAGE_CACHE_KB = 960KB;
+GEM_PGSVR_COMPRESS_PAGE_TRANSFERS = FALSE;
+GEM_PGSVR_FREE_FRAME_CACHE_SIZE = -1;
+GEM_PGSVR_FREE_FRAME_LIMIT = -1;
+GEM_PGSVR_UPDATE_CACHE_ON_READ = FALSE;
+GEM_PGSVR_USE_SSL = FALSE;
+GEM_READ_AUTH_ERR_STUBS = FALSE;
+GEM_REPOSITORY_IN_MEMORY = FALSE;
+GEM_RPC_KEEPALIVE_INTERVAL = 0;
+GEM_RPCGCI_TIMEOUT = 0;
+GEM_RPC_USE_SSL = TRUE;
+GEM_SOFTREF_CLEANUP_PERCENT_MEM = 50;
+GEM_STATMONITOR_ARGS = "";
+GEM_STATMONITOR_MID_CACHE_ARGS = "";
+GEM_TEMPOBJ_AGGRESSIVE_STUBBING = TRUE;
+GEM_TEMPOBJ_CACHE_SIZE = 50000KB;
+GEM_TEMPOBJ_CONSECUTIVE_MARKSWEEP_LIMIT = 50;
+GEM_TEMPOBJ_MESPACE_SIZE = 0;
+GEM_TEMPOBJ_OOMSTATS_CSV = FALSE;
+GEM_TEMPOBJ_OOPMAP_SIZE = 0;
+GEM_TEMPOBJ_SCOPES_SIZE = 2000;
+GEM_TEMPOBJ_POMGEN_SIZE = 0;
+GEM_TEMPOBJ_POMGEN_PRUNE_ON_VOTE = 50;
+GEM_TEMPOBJ_POMGEN_SCAVENGE_INTERVAL = 1800;
+GEM_TEMPOBJ_START_ADDR not used on this platform
+LOG_WARNINGS = TRUE;
+SHR_NUM_FREE_FRAME_SERVERS = -1;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_POLICY = 0;
+SHR_PAGE_CACHE_LARGE_MEMORY_PAGE_SIZE_MB = 0;
+SHR_PAGE_CACHE_LOCKED = FALSE;
+SHR_PAGE_CACHE_NUM_PROCS = 65529;
+SHR_PAGE_CACHE_NUM_SHARED_COUNTERS = 1900;
+SHR_PAGE_CACHE_PERMISSIONS = 660;
+SHR_PAGE_CACHE_SIZE_KB = 75000KB;
+SHR_TARGET_FREE_FRAME_COUNT = -1;
+SHR_WELL_KNOWN_PORT_NUMBER = 0;
+CONFIG_WARNINGS_FATAL = FALSE;
+(vmGc spaceSizes: eden init 2048K max 9344K , survivor init 448K max 1600K,
+ vmGc    old max 37440K, code max 10048K, perm max 5056K, pom 10 * 4224K = 42240K,
+ vmGc    remSet 1156K, meSpace max 51540K oopMapSize 262144  max footprint 164M)
+ _____________________________________________________________________________
+|             GemStone/S64 Object-Oriented Data Management System             |
+|                   Copyright (C) GemTalk Systems 1986-2017                   |
+|                            All rights reserved.                             |
+|                           Covered by U.S Patents:                           |
+|            6,256,637 Transactional virtual machine architecture             |
+|              6,360,219 Object queues with concurrent updating               |
+|                  6,567,905 Generational Garbage Collector.                  |
+| 6,681,226 Selective Pessimistic Locking for a Concurrently Updateable Database
++-----------------------------------------------------------------------------+
+|    PROGRAM: topaz, Linear GemStone Interface (Linked Session)               |
+|    VERSION: 3.4.0, Thu Oct 19 11:19:41 2017                                 |
+|      BUILD: gss64_3_4_x_branch-42785                                        |
+|  BUILT FOR: x86-64 (Linux)                                                  |
+|       MODE: 64 bit                                                          |
+| RUNNING ON: 4-CPU reahl-development-machine x86_64 (Linux 4.4.0-109-generic |
+| #132-Ubuntu SMP Tue Jan 9 19:52:39 UTC 2018) 7809MB                         |
+| PROCESS ID: 6792      DATE: 01/16/2018 09:59:46 UTC                         |
+|   USER IDS: REAL=vagrant (1000) EFFECTIVE=vagrant (1000) LOGIN=vagrant (1000)
+|_____________________________________________________________________________|
+Warning, executable configuration file not found
+    /vagrant/gem.conf
+
+neither .topazini nor $HOME/.topazini were found
+topaz> iferror stack 200
+topaz> display oops
+topaz> 
+topaz> set user DataCurator password swordfish gemstone gs64stone
+topaz> 
+topaz> login
+[Info]: LNK client/gem GCI levels = 34001/34001
+--- 01/16/2018 09:59:46.136 UTC Login
+[Info]: Loaded /opt/gemstone/GemStone64Bit3.4.0-x86_64.Linux/lib/libfloss-3.4.0-64.so
+[Info]: User ID: DataCurator
+[Info]: Repository: gs64stone
+[Info]: Session ID: 6
+[Info]: GCI Client Host: <Linked>
+[Info]: Page server PID: -1
+[Info]: using libicu version 58.2
+[Info]: Gave this process preference for OOM killer: wrote to /proc/6792/oom_score_adj value 250
+[01/16/2018 09:59:46.156 UTC]
+  gci login: currSession 1  linked session 
+successful login
+ fileformat is now utf8
+sourcestringclass is now Unicode16 
+topaz 1> 
+topaz 1> run
+   Gofer it
+     repository: (MCFileTreeRepository new directory: (ServerFileDirectory on: wonkaRoot, '/monticello'));
+     package: 'BaselineOfWonkaRuntime';
+     load.
+   System commitTransaction
+%
+[268 sz:0 cls: 68097 Boolean] true
+topaz 1> 
+topaz 1> run
+   MCPlatformSupport
+     autoMigrate: false;
+     commitOnAlmostOutOfMemoryDuring: [
+	WonkaLoader
+	    loadWonkaRuntimeGroup: 'CI'
+	    fromWonkaRoot: wonkaRoot
+	    platform: wonkaPlatformName
+	    overNetwork: wonkaOverNetwork
+     ].
+   System commitTransaction
+%
+--transcript--'Loading runtime version 1.1.0 from none'
+--transcript--'*** Loading GsUpgrader
+  From: filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfGsUpgrader-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository'
+--transcript--'Loaded -> BaselineOfGsUpgrader-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository'
+--transcript--'Loading baseline of BaselineOfGsUpgrader...'
+--transcript--'Fetched -> GsUpgrader-Core-dkh.121 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository'
+--transcript--'Loaded -> GsUpgrader-Core-dkh.121 --- filetree:///vagrant/3rdparty/gemstone/gsUpgrader/repository --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'...finished baseline'
+--transcript--'======================'
+--transcript--'=====Installing patchForGsDevKitIssue60: HTTPSocket'
+--transcript--'======================'
+--transcript--'=====Installing patchForGsDevKitIssue60: MCPlatformSupport class'
+--transcript--'*** Loading Metacello preview bootstrap'
+--transcript--'Loading 1.0-beta.32.1 of ConfigurationOfMetacello...'
+--transcript--'Project: FileTree stable'
+--transcript--' [1.0.6.1]'
+--transcript--'Project: Monticello 0.243'
+--transcript--' [0.244.3]'
+--transcript--'Project: GsMonticello 0.244.2'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Project: GsCore 0.247'
+--transcript--' [0.250]'
+--transcript--'Evaluated -> 1.0-beta.32.1 [ConfigurationOfMetacello] >> metacelloPrimeRegistry'
+--transcript--'...finished 1.0-beta.32.1'
+--transcript--'*** Loading Metacello preview'
+--transcript--'Fetched -> ConfigurationOfMetacelloPreview-dkh.60 --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview'
+--transcript--'Loaded -> ConfigurationOfMetacelloPreview-dkh.60 --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview --- filetree:///vagrant/3rdparty/gemstone/metacelloPreview'
+--transcript--'Loading 1.0.0-beta.32.18 of ConfigurationOfMetacelloPreview...'
+--transcript--'Fetched -> BaselineOfMetacello-dkh.85 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Loaded -> BaselineOfMetacello-dkh.85 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Project: Metacello baseline'
+--transcript--'Fetched -> BaselineOfFileTree-dkh.4 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Loaded -> BaselineOfFileTree-dkh.4 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> MonticelloFileTree-Core-dkh.199 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Fetched -> MonticelloFileTree-FileDirectory-Utilities-dkh.15 --- github://dalehenrich/filetree:gemstone2.4/repository --- github://dalehenrich/filetree:gemstone2.4/repository'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Base-dkh.123 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Core-dkh.807 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-MC-dkh.722 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.56 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GS3x-Platform-dkh.1 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-ToolBox-dkh.139 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-FileTree-dkh.36 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GitBasedRepository-dkh.13 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-Bitbucket-dkh.5 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Fetched -> Metacello-GitHub-dkh.44 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository'
+--transcript--'Loaded -> MonticelloFileTree-Core-dkh.199 --- github://dalehenrich/filetree:gemstone2.4/repository --- cache'
+--transcript--'Loaded -> MonticelloFileTree-FileDirectory-Utilities-dkh.15 --- github://dalehenrich/filetree:gemstone2.4/repository --- cache'
+--transcript--'Loaded -> Metacello-Base-dkh.123 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Core-dkh.807 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-MC-dkh.722 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.56 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-GS3x-Platform-dkh.1 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-ToolBox-dkh.139 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-FileTree-dkh.36 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-GitBasedRepository-dkh.13 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-Bitbucket-dkh.5 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'Loaded -> Metacello-GitHub-dkh.44 --- github://dalehenrich/metacello-work:7deb62a415343f8ba8294c84c9c3438c75455fe3/repository --- cache'
+--transcript--'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'...finished 1.0.0-beta.32.18'
+--transcript--'*** Loading FileTree
+  From: filetree:///vagrant/3rdparty/gemstone/filetree/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfFileTree-dkh.4 --- filetree:///vagrant/3rdparty/gemstone/filetree/repository [1e44c08:HEAD] --- filetree:///vagrant/3rdparty/gemstone/filetree/repository'
+--transcript--'Loaded -> BaselineOfFileTree-dkh.4 --- filetree:///vagrant/3rdparty/gemstone/filetree/repository [1e44c08:HEAD] --- filetree:///vagrant/3rdparty/gemstone/filetree/repository'
+--transcript--'Loading baseline of BaselineOfFileTree...'
+--transcript--'...finished baseline'
+--transcript--'*** Loading Metacello
+  From: filetree:///vagrant/3rdparty/gemstone/metacello-work/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loaded -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loaded -> BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loading baseline of BaselineOfMetacello...'
+--transcript--'Fetched -> Metacello-Base-topa.124 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Project: Gofer stable'
+--transcript--' [1.0.5.1]'
+--transcript--'Fetched -> Metacello-Core-EstebanLorenzano.832 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-MC-EstebanLorenzano.735 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-Platform.gemstone-dkh.66 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-ToolBox-EstebanLorenzano.149 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-Cypress-TravisCI.7 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> Metacello-GitBasedRepository-dkh.21 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-GitHub-topa.46 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Fetched -> Metacello-Bitbucket-topa.6 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Loaded -> Metacello-Base-topa.124 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Core-EstebanLorenzano.832 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-MC-EstebanLorenzano.735 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Platform.gemstone-dkh.66 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Evaluated -> Metacello-Platform >> gemstone10beta311PostLoadDoIt'
+--transcript--'Loaded -> Metacello-ToolBox-EstebanLorenzano.149 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Cypress-TravisCI.7 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-GitBasedRepository-dkh.21 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-GitHub-topa.46 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Metacello-Bitbucket-topa.6 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'priming registry from image. See https://github.com/dalehenrich/metacello-work/issues/197'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'...finished baseline'
+--transcript--'*** Loading Grease
+  From: filetree:///vagrant/3rdparty/gemstone/grease/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loaded -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Fetched -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loaded -> BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loading baseline of BaselineOfGrease...'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'Project: Core 0.247'
+--transcript--'Fetched -> Grease-Core-topa.109 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Fetched -> Grease-GemStone-Core-JohanBrichau.69 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Fetched -> Grease-GemStone300-Core-dkh.6 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Loaded -> Grease-Core-topa.109 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Grease-GemStone-Core-JohanBrichau.69 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Grease-GemStone300-Core-dkh.6 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Evaluated -> Grease-GemStone300-Core >> initializeLatin1ToUtf8Encodings'
+--transcript--'...finished baseline'
+--transcript--'*** ZipArchive fuckery start'
+--transcript--'*** ZipArchive fuckery done'
+--transcript--'*** Loading GLASS1
+  From: filetree:///vagrant/3rdparty/gemstone/glass/repository
+  Modes: anArray( #''overNetwork'', #''autoMigrate'', #''lock'')
+'
+--transcript--'Fetched -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loaded -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loaded -> BaselineOfGLASS1-dkh.63 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Loading baseline of BaselineOfGLASS1...'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfGrease-JohanBrichau.1496564075 --- filetree:///vagrant/3rdparty/gemstone/grease/repository [6973d2b:HEAD] --- filetree:///vagrant/3rdparty/gemstone/grease/repository'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Fetched -> (nearest) BaselineOfMetacello-EstebanLorenzano.97 --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository [2f5cd0f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/metacello-work/repository'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: GoferProjectLoader stable'
+--transcript--' [1.0-alpha2.2]'
+--transcript--'Project: Gofer Core 1.0.2.1'
+--transcript--'Project: Gofer stable'
+--transcript--'Conflict between existing: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/grease/repository''.^M  and new: BaselineOfGrease spec 
+	name: ''Grease'';
+	loads: #(''Core'' );
+	repository: ''github://GsDevKit/Grease:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Grease baseline'
+--transcript--'Project: GsCore stable'
+--transcript--' [0.250]'
+--transcript--'Project: SMTPMail stable'
+--transcript--' [0.243]'
+--transcript--'Project: Core 0.247'
+--transcript--'Project: UTF8 stable'
+--transcript--'Project: System-Digital-Signatures stable'
+--transcript--'Conflict between existing: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	loads: #(''default'' );
+	repository: ''filetree:///vagrant/3rdparty/gemstone/metacello-work/repository''.^M  and new: BaselineOfMetacello spec 
+	name: ''Metacello'';
+	repository: ''github://dalehenrich/metacello-work:master/repository''.^M  resolved in favor of existing'
+--transcript--'Project: Metacello baseline'
+--transcript--'Project: Gofer stable'
+--transcript--'Project: FileTree baseline'
+--transcript--'Fetched -> GemStone-Interactions-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Core.v3-dkh.98 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Core322x-dkh.3 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Base-Bootstrap.v3-dkh.32 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Bootstrap.v34-dkh.262 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-ANSI-Streams-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-Indexing-Extensions.v34-dkh.5 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Sport3.010.v3-jupiter.33 --- http://seaside.gemtalksystems.com/ss/hyper --- http://seaside.gemtalksystems.com/ss/hyper'
+--transcript--'Fetched -> OB-GemStone-Platform-dkh.76 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Squeak.v34-dkh.341 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GsSqueakCommon-Core-dkh.20 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GsSqueakCommon-CoreV30-dkh.2 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GsSqueakCommon-TestsV30-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> PackageInfo-Base.g-dkh.41 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Monticello.v34-dkh.488 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> GemStone-Deployment.v310-dkh.38 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Change-Notification.v310-dkh.27 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> OB-Standard.v3-dkh.450 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> OB-Monticello-dkh.105 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Utf8Encoding.310-dkh.33 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> SMTPMail-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> Announcements.v3-dkh.19 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Fetched -> OB-Tools.v33-dkh.145 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/gemstone/glass/repository'
+--transcript--'Evaluated -> 1.0-alpha2.2 [ConfigurationOfGoferProjectLoader] >> postLoadLoader'
+--transcript--'Evaluated -> baseline [BaselineOfMetacello] >> reprimeRegistryIssue197'
+--transcript--'Loaded -> GemStone-Interactions-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Core'
+--transcript--'Loaded -> Core.v3-dkh.98 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Core322x-dkh.3 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Base-Bootstrap.v3-dkh.32 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Bootstrap.v34-dkh.262 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GemStone-ANSI-Streams-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GemStone-Indexing-Extensions.v34-dkh.5 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Sport3.010.v3-jupiter.33 --- http://seaside.gemtalksystems.com/ss/hyper --- http://seaside.gemtalksystems.com/ss/hyper'
+--transcript--'Loaded -> OB-GemStone-Platform-dkh.76 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Squeak'
+--transcript--'Loaded -> Squeak.v34-dkh.341 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GsSqueakCommon-Core-dkh.20 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GsSqueakCommon-CoreV30-dkh.2 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GsSqueakCommon-TestsV30-dkh.1 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> PackageInfo-Base.g-dkh.41 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'patching Monticello for load of trait support'
+--transcript--'Evaluated -> Monticello >> traitsMonticelloPreLoadDoIt'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Monticello'
+--transcript--'Loaded -> Monticello.v34-dkh.488 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> GemStone-Deployment.v310-dkh.38 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Evaluated -> GemStone-Deployment >> deploymentPostLoadDoIt'
+--transcript--'Loaded -> Change-Notification.v310-dkh.27 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Standard'
+--transcript--'Loaded -> OB-Standard.v3-dkh.450 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> OB-Monticello-dkh.105 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Utf8Encoding.310-dkh.33 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> SMTPMail-dkh.12 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Loaded -> Announcements.v3-dkh.19 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Tools'
+--transcript--'Loaded -> OB-Tools.v33-dkh.145 --- filetree:///vagrant/3rdparty/gemstone/glass/repository [5fa001f:HEAD] --- filetree:///vagrant/3rdparty/GemStone3.4'
+--transcript--'...finished baseline'
+--transcript--'*** There were warnings during load ***'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Core'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Squeak'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  Monticello'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Standard'
+--transcript--'Warning: You are about to load new versions of the following packages that have unsaved changes in the image.  If you continue, you will lose these changes.
+
+  OB-Tools'
+--transcript--'Loading '
+--transcript--'BaselineOfGLASS1.package'
+-----------------------------------------------------
+GemStone: Error         Nonfatal
+a MessageNotUnderstood occurred (error 2010), a UndefinedObject does not understand  #'directoryNamed:'
+Error Category: 231169 [GemStone] Number: 2010  Arg Count: 4 Context : 55654401 exception : 162560769
+Arg 1: [29847553 sz:15 cls: 110849 Symbol] directoryNamed:
+Arg 2: [2 sz:0 cls: 74241 SmallInteger] 0 == 0x0
+Arg 3: [20 sz:0 cls: 76289 UndefinedObject] nil
+Arg 4: [162560513 sz:1 cls: 66817 Array] anArray
+topaz > exec iferr 1 : stack 200 
+==> 1 MessageNotUnderstood >> defaultAction         @3 line 3   [methId 5382145]
+    receiver [162560769 sz:13 cls: 131073 MessageNotUnderstood] a MessageNotUnderstood occurred (error 2010), a UndefinedObject does not understand  #'directoryNamed:'
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+2 MessageNotUnderstood (AbstractException) >> _signalWith: @6 line 25   [methId 4438273]
+    receiver [162560769 sz:13 cls: 131073 MessageNotUnderstood] a MessageNotUnderstood occurred (error 2010), a UndefinedObject does not understand  #'directoryNamed:'
+    inCextensionArg [20 sz:0 cls: 76289 UndefinedObject] nil
+    res [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+3 MessageNotUnderstood (AbstractException) >> signal @2 line 47   [methId 4438785]
+    receiver [162560769 sz:13 cls: 131073 MessageNotUnderstood] a MessageNotUnderstood occurred (error 2010), a UndefinedObject does not understand  #'directoryNamed:'
+(skipped 2 evaluationTemps)
+4 UndefinedObject (Object) >> doesNotUnderstand: @10 line 10   [methId 4090113]
+    receiver [20 sz:0 cls: 76289 UndefinedObject] nil
+    aMessageDescriptor [162550529 sz:2 cls: 11807745 Message] aMessage
+    ex [162560769 sz:13 cls: 131073 MessageNotUnderstood] a MessageNotUnderstood occurred (error 2010), a UndefinedObject does not understand  #'directoryNamed:'
+    sel [29847553 sz:15 cls: 110849 Symbol] directoryNamed:
+    args [162560513 sz:1 cls: 66817 Array] anArray
+(skipped 1 evaluationTemps)
+5 UndefinedObject (Object) >> _doesNotUnderstand:args:envId:reason: @8 line 13   [methId 11782657]
+    receiver [20 sz:0 cls: 76289 UndefinedObject] nil
+    aSymbol [29847553 sz:15 cls: 110849 Symbol] directoryNamed:
+    anArray [162560513 sz:1 cls: 66817 Array] anArray
+    aSmallInt [2 sz:0 cls: 74241 SmallInteger] 0 == 0x0
+    dnuKind [2 sz:0 cls: 74241 SmallInteger] 0 == 0x0
+(skipped 2 evaluationTemps)
+6 MCFileTreeFileDirectoryUtils class >> directoryFromPath:relativeTo: @2 line 2   [methId 70682881]
+    receiver [54099201 sz:19 cls: 54099457 MCFileTreeFileDirectoryUtils class] MCFileTreeFileDirectoryUtils
+    directoryPath [83023361 sz:15 cls: 74753 String] monticello.meta
+    aDirectory [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 5 evaluationTemps)
+7 MCFileTreeStCypressReader (MCFileTreeAbstractReader) >> hasMonticelloMetadata @9 line 8   [methId 114716161]
+    receiver [162534145 sz:11 cls: 110557953 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+    metaDir [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 4 evaluationTemps)
+8 MCFileTreeStCypressReader >> loadPackage      @2 line 2   [methId 114706433]
+    receiver [162534145 sz:11 cls: 110557953 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+9 MCFileTreeStCypressReader (MCVersionReader) >> package @3 line 2   [methId 38906625]
+    receiver [162534145 sz:11 cls: 110557953 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+10 MCFileTreeStCypressReader >> basicVersion     @3 line 3   [methId 114707201]
+    receiver [162534145 sz:11 cls: 110557953 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 3 evaluationTemps)
+11 MCFileTreeStCypressReader (MCVersionReader) >> version @2 line 2   [methId 38905601]
+    receiver [162534145 sz:11 cls: 110557953 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+12 [] in MCFileBasedRepository >> loadVersionFromFileNamed: @5 line 2   [methId 44415489]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [41391105 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    r [162534145 sz:11 cls: 110557953 MCFileTreeStCypressReader] aMCFileTreeStCypressReader
+(skipped 1 evaluationTemps)
+13 [] in MCFileBasedRepository >> versionReaderForFileNamed:do: @13 line 6   [methId 49805057]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [162504705 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    class [110557953 sz:19 cls: 110557697 MCFileTreeStCypressReader class] MCFileTreeStCypressReader
+    s [162502401 sz:4 cls: 36510721 RWBinaryOrTextStream] aRWBinaryOrTextStream
+    aBlock [41391105 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 3 evaluationTemps)
+    _VC [162505217 sz:4 cls: 134913 VariableContext] aVariableContext
+14 MCFileTreeStCypressReader class (Object) >> ifNotNilDo: @2 line 4   [methId 47452161]
+    receiver [110557953 sz:19 cls: 110557697 MCFileTreeStCypressReader class] MCFileTreeStCypressReader
+    aBlock [162504705 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 2 evaluationTemps)
+15 [] in MCFileBasedRepository >> versionReaderForFileNamed:do: @8 line 5   [methId 44419841]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [162496513 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    s [162502401 sz:4 cls: 36510721 RWBinaryOrTextStream] aRWBinaryOrTextStream
+    aString [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+(skipped 3 evaluationTemps)
+    _VC [162505217 sz:4 cls: 134913 VariableContext] aVariableContext
+16 MCPlatformSupport class >> readStreamForFileNamed:onClient:do: @14 line 9   [methId 157995009]
+    receiver [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    aString [162561281 sz:54 cls: 154369 Unicode7] /vagrant/3rdparty/GemStone3.4/BaselineOfGLASS1.package
+    onClient [12 sz:0 cls: 68097 Boolean] false
+    aBlock [162496513 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    file [162561537 sz:5 cls: 135169 GsFile] aGsFile
+    stream [162502401 sz:4 cls: 36510721 RWBinaryOrTextStream] aRWBinaryOrTextStream
+(skipped 2 evaluationTemps)
+17 MCDirectoryRepository >> readStreamForFileNamed:do: @4 line 2   [methId 40558081]
+    receiver [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+    aString [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+    aBlock [162496513 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 4 evaluationTemps)
+18 MCDirectoryRepository (MCFileBasedRepository) >> versionReaderForFileNamed:do: @3 line 3   [methId 38914817]
+    receiver [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+    aString [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+    aBlock [41391105 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+(skipped 4 evaluationTemps)
+    _VC [162483969 sz:5 cls: 134913 VariableContext] aVariableContext
+19 MCDirectoryRepository (MCFileBasedRepository) >> loadVersionFromFileNamed: @2 line 2   [methId 38912257]
+    receiver [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+    aString [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+(skipped 3 evaluationTemps)
+20 [] in MCFileBasedRepository >> versionFromFileNamed: @14 line 3   [methId 44422913]
+    self [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+    receiver [162476289 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aString [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+    self [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+(skipped 3 evaluationTemps)
+    _VC [162476801 sz:5 cls: 134913 VariableContext] aVariableContext
+21 Dictionary >> at:ifAbsent:                    @8 line 10   [methId 12832769]
+    receiver [162471937 sz:26 cls: 101377 Dictionary] aDictionary
+    aKey [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+    aBlock [162476289 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    anAssoc [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+22 MCDirectoryRepository (MCFileBasedRepository) >> versionFromFileNamed: @4 line 3   [methId 38916353]
+    receiver [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+    aString [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+    v [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 3 evaluationTemps)
+    _VC [162476801 sz:5 cls: 134913 VariableContext] aVariableContext
+23 [] in WonkaLoader class >> ensureNewConfigurationsLoaded @20 line 20   [methId 53873921]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [162464513 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    each [162494209 sz:24 cls: 154369 Unicode7] BaselineOfGLASS1.package
+    repository [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+(skipped 3 evaluationTemps)
+    _VC [162465025 sz:4 cls: 134913 VariableContext] aVariableContext
+24 SortedCollection (Collection) >> do:          @6 line 10   [methId 2448385]
+    receiver [162460417 sz:41 cls: 92929 SortedCollection] aSortedCollection
+    aBlock [162464513 sz:5 cls: 128001 ExecBlock1] anExecBlock1
+    i [34 sz:0 cls: 74241 SmallInteger] 4 == 0x4
+(skipped 4 evaluationTemps)
+25 WonkaLoader class >> ensureNewConfigurationsLoaded @10 line 14   [methId 53653249]
+    receiver [53604353 sz:19 cls: 53604609 WonkaLoader class] WonkaLoader
+    repository [162487809 sz:4 cls: 37136385 MCDirectoryRepository] aMCDirectoryRepository
+(skipped 3 evaluationTemps)
+    _VC [162465025 sz:4 cls: 134913 VariableContext] aVariableContext
+26 WonkaLoader class >> loadWonkaRuntimeGroup:fromWonkaRoot:platform:overNetwork: @22 line 19   [methId 53654785]
+    receiver [53604353 sz:19 cls: 53604609 WonkaLoader class] WonkaLoader
+    group [162451713 sz:2 cls: 154369 Unicode7] CI
+    localDirectory [53995265 sz:8 cls: 154369 Unicode7] /vagrant
+    aString [53995009 sz:11 cls: 154369 Unicode7] GemStone3.4
+    overNetwork [268 sz:0 cls: 68097 Boolean] true
+    modes [53729281 sz:1 cls: 66817 Array] anArray
+(skipped 2 evaluationTemps)
+27 [] in Executed Code                           @7 line 5   [methId 162449409]
+    self [20 sz:0 cls: 76289 UndefinedObject] nil
+    receiver [162448129 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 5 evaluationTemps)
+28 [] in MCPlatformSupport class >> commitOnAlmostOutOfMemoryDuring: @12 line 7   [methId 48044801]
+    self [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    receiver [162444289 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [162448129 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    self [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+(skipped 2 evaluationTemps)
+    _VC [162444801 sz:5 cls: 134913 VariableContext] aVariableContext
+29 ExecBlock0 (ExecBlock) >> ensure:             @2 line 12   [methId 4357889]
+    self [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    receiver [162444289 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+    aBlock [162438401 sz:5 cls: 143361 ExecBlock] anExecBlock
+    result [20 sz:0 cls: 76289 UndefinedObject] nil
+    b [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 1 evaluationTemps)
+30 MCPlatformSupport class >> commitOnAlmostOutOfMemoryDuring: @7 line 8   [methId 43175681]
+    receiver [37035009 sz:19 cls: 37030913 MCPlatformSupport class] MCPlatformSupport
+    aBlock [162448129 sz:5 cls: 127745 ExecBlock0] anExecBlock0
+(skipped 3 evaluationTemps)
+    _VC [162444801 sz:5 cls: 134913 VariableContext] aVariableContext
+31 Executed Code                                 @3 line 3   [methId 162448641]
+    receiver [20 sz:0 cls: 76289 UndefinedObject] nil
+(skipped 3 evaluationTemps)
+32 GsNMethod class >> _gsReturnToC               @1 line 1   [methId 4523009]
+    receiver [144897 sz:19 cls: 744193 GsNMethod class] GsNMethod
+topaz 1> 
+topaz 1> exit
+Logging out session 1.
+--- 01/16/2018 10:01:06.542 UTC Logging out
