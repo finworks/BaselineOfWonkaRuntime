@@ -5,4 +5,4 @@ allLocalRepositories
 	(WonkaSourceCode instance localThirdPartyGsUpgraderRepository).
 	(WonkaSourceCode instance localThirdPartyGreaseRepository).
 	(WonkaSourceCode instance localThirdPartyGLASSRepository).
-	(WonkaSourceCode instance localPlatformSpecificThirdPartyPackagesDirectory fullName)}
+	('filetree://', (WonkaSourceCode instance localPlatformSpecificThirdPartyPackagesDirectory fullName))}
